@@ -5,6 +5,9 @@
 		margin: 0 0 3rem 0;
 	}
 }
+.slick-track {
+	will-change: transform;
+}
 .slick-slide {
 	position: relative;
     &:before {

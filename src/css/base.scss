@@ -36,25 +36,10 @@ body {
     margin: 0;
     @include font-smoothing();
 }
-section {
-    // overflow: auto;
-    // min-height: 100vh;
-}
-// article {
-//     margin: 0 0 2rem;
-//     @media only screen and (min-width: $screen-sm-min) {
-//         margin: 0 2rem 2rem 2rem;
-//     }
-// }
 ul, ol {
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
-// ul, li {
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-// }
 img {
     max-width: 100%;
     height: auto;
@@ -77,14 +62,6 @@ img {
 .col {
     padding-left: 2rem;
     padding-right: 2rem;
-    @media only screen and (min-width: $screen-md-min) {
-        // &:first-child {
-        //  padding-left: 4rem;
-        // }
-        // &:last-child {
-        //  padding-right: 4rem;
-        // }
-    }
 }
 hr, .hr--light {
     border-color: $med-gray;

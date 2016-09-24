@@ -2,6 +2,7 @@
 @import 'brand';
 @import 'buttons';
 @import 'typography';
+@import 'mixins';
 @import 'slick-slider';
 
 @mixin transition($prop) {
@@ -35,6 +36,7 @@ body {
 	&.js-no-scroll {
 		overflow: hidden;
 	}
+	// @include accelerated();
 }
 section {
 	padding-top: 5.5rem;
@@ -201,6 +203,7 @@ header {
 }
 .content-link {
     @extend .font-oswald;
+    @include accelerated(transform);
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -518,6 +521,9 @@ header {
 			.project-card__copy {
 				flex-grow: 2;
 				padding: 1rem;
+				-webkit-transition: flex-grow .2s;
+				transition: flex-grow .2s;
+				will-change: flex-grow;
 				h2 {
 					border-bottom: 1px solid $med-dark-gray;
 					padding-bottom: .5rem;
@@ -538,6 +544,11 @@ header {
 				width: auto;
 			}
 		}
+		&:hover {
+			footer .project-card__copy {
+				flex-grow: 1;
+			}
+		}
 	}
 	#project-loader {
 		position: fixed;
@@ -549,6 +560,7 @@ header {
 		pointer-events: none;
 		overflow: hidden;
 		#project-content {
+			@include accelerated(opacity);
 			position: relative;
 			z-index: 5;
 			height: 100%;
@@ -578,6 +590,7 @@ header {
 		}
 		// Sliding panels ========== //
 		&:before, &:after {
+			@include accelerated(transform);
 			content: "";
 			position: absolute;
 			left: 0;
@@ -596,6 +609,7 @@ header {
 			transform: translateY(100%);
 		}
 		.btn--js-close-project {
+			@include accelerated(transform);
 			float: right;
 			width: auto;
 			width: 20px;

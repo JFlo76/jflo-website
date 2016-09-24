@@ -34,14 +34,6 @@
 		&:after {
 			bottom: -50%;
 		}
-		// &:hover {
-		// 	&:before {
-		// 		transform: translateY(100%);
-		// 	}
-		// 	&:after {
-		// 		transform: translateY(-100%);
-		// 	}
-		// }
 		&:active {
 			transform: translateY(1px);
 			&:before {
