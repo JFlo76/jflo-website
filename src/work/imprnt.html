@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Imprnt</h1>
+					<span class="btn--js-close-project">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
+							<line class="st0" x1="0" y1="0" x2="45" y2="45"/>
+							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
+						</svg>
+					</span>
+				<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-7">
+					<div class="slick-slider">
+						<div class="content">
+							<img src="/img/projects/imprnt-home.jpg"
+							srcset="/img/projects/imprnt-home-2x.jpg 2x, 
+							/img/projects/imprnt-home-3x.jpg 3x">
+						</div>
+						<div class="content">
+							<img src="/img/projects/imprnt-mobile.jpg"
+							srcset="/img/projects/imprnt-mobile-2x.jpg 2x, 
+							/img/projects/imprnt-mobile-3x.jpg 3x">
+						</div>
+					</div>
+				</div>
+				<div class="project-description col col-sm-5">
+					<p>Imprnt is a specialty screen printing shop located in the heart of Seattle, WA. I was contracted to redesign and develop their website with the following goals:</p>
+					<ul>
+						<li>Improve SEO</li>
+						<li>Optimize for mobile</li>
+						<li>Make the site more user friendly</li>
+						<li>Provide users the ability to get a customized quote via an online tool</li>
+					</ul>
+					<!-- <p>The previous site had some experimental navigation that left the visitors searching for the links, and the imagery only contained shots of the building and silk screen equipment. Seeing as how their main demographic is liberal 20-40 year olds involved in the music and "Get Busy Livin'" lifestyle, I suggested showcasing some recent work that would reflect the energy of their clientele.</p>
+					<p>I recommended surfacing the navigation to the top of the page, adding some more modern SEO elements to the HTML, including Open Graph tags for Facebook, and structuring the HTML according to the Google Amp guidelines.</p>
+					<p>Currently, the project is still in the works, and I'm planning to implement a small app for providing estimates using React JS</p> -->
+					<hr class="hr--dark"/>
+					<p>Toolkit: Adobe Illustrator/Photoshop</p>
+					<p>Project Status: Design Phase</p>
+				</div>
+			</div>
+	</body>
+
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			prevArrow: '<button class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10.7 -1.4 24.6 46.4" xml:space="preserve" class="icon-arrow" icon-arrow--left"><polyline points="13.2,44.3 -9.3,21.8 13.2,-0.7 "/></svg></button>',
+			nextArrow: '<button class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.6 46.4" xml:space="preserve" class="icon-arrow"><polyline points="0.7,0.7 23.2,23.2 0.7,45.7 "/></svg></button>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+					}
+				},
+			],
+		});
+
+		$('.btn--js-close-project').on('click', function() {
+			$('#project-content').toggleClass('fade-in');
+			
+			$('#project-content').one('msTransitionEnd transitionend', function() {
+				$('body').removeClass('js-no-scroll');
+				$('.projects').toggleClass('projects--loading-project');
+				$('#project-content').empty();
+			});
+			
+		});
+	</script>
+</html>

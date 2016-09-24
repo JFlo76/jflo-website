@@ -1,0 +1,38 @@
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.font-oswald {
+	font-family: 'Oswald', sans-serif;
+}
+body {
+	@include font-smoothing();	
+}
+h1, h2, h3, h4, h5, h6 {
+	@extend .font-oswald;
+	margin-top: 0;
+	line-height: 1.4;
+	font-weight: 300;
+}
+h1 {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2rem;
+}
+p {
+	margin-bottom: 2rem;
+}
+a {
+	color: $black;
+	&:hover {
+		color: $primary-color;
+		text-decoration: none;
+	}
+}
+::-moz-selection { background: $secondary-color; }
+::selection { background: $secondary-color; }

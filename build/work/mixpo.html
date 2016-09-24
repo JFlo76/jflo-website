@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Mixpo</h1>
+					<span class="btn--js-close-project">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
+							<line class="st0" x1="0" y1="0" x2="45" y2="45"/>
+							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
+						</svg>
+					</span>
+				<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-7">
+					<div class="slick-slider">
+						<div>
+							<img src="/img/projects/mixpo-login.jpg"
+							srcset="/img/projects/mixpo-login-2x.jpg 2x, 
+							/img/projects/mixpo-login-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-analytics-preview.jpg"
+							srcset="/img/projects/mixpo-analytics-preview-2x.jpg 2x, 
+							/img/projects/mixpo-analytics-preview-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-analytics-page.jpg"
+							srcset="/img/projects/mixpo-analytics-page-2x.jpg 2x, 
+							/img/projects/mixpo-analytics-page-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-placements-modal.jpg"
+							srcset="/img/projects/mixpo-placements-modal-2x.jpg 2x, 
+							/img/projects/mixpo-placements-modal-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-placements-animated.gif">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-publisher-modal.jpg"
+							srcset="/img/projects/mixpo-publisher-modal-2x.jpg 2x, 
+							/img/projects/mixpo-publisher-modal-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-creatives-animated.gif">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-styleguide-icons.jpg"
+							srcset="/img/projects/mixpo-styleguide-icons-2x.jpg 2x, 
+							/img/projects/mixpo-styleguide-icons-3x.jpg 3x">
+						</div>
+						<div>
+							<img src="/img/projects/mixpo-styleguide-controls.jpg"
+							srcset="/img/projects/mixpo-styleguide-controls-2x.jpg 2x, 
+							/img/projects/mixpo-styleguide-controls-3x.jpg 3x">
+						</div>
+					</div>
+				</div>
+				<div class="project-description col col-sm-5">
+					<p>Mixpo provides a web-based application that enables publishers to create and manage interactive advertising campaigns.</p>
+					<p>Mixpo's original software product was built on Flash, and it was time to bring it into a modern tech stack. As an employee at Mixpo, I helped to build the UI of the application and pattern library using AngularJS and Bootstrap.</p>
+					<p>Working closely with designers and project managers, I also assumed an active role as UX advocate, suggesting patterns to help reduce the chance of user error and provide meaningful feedback.</p>
+					<hr class="hr--dark"/>
+					<p>Toolkit: NPM, Grunt, Git, AngularJS, Twitter Bootstrap</p>
+					<p>Project Status: Live (via paid service only)</p>
+				</div>
+			</div>
+	</body>
+
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			prevArrow: '<button class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10.7 -1.4 24.6 46.4" xml:space="preserve" class="icon-arrow" icon-arrow--left"><polyline points="13.2,44.3 -9.3,21.8 13.2,-0.7 "/></svg></button>',
+			nextArrow: '<button class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.6 46.4" xml:space="preserve" class="icon-arrow"><polyline points="0.7,0.7 23.2,23.2 0.7,45.7 "/></svg></button>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+					}
+				},
+			],
+		});
+
+		$('.btn--js-close-project').on('click', function() {
+			$('#project-content').toggleClass('fade-in');
+			
+			$('#project-content').one('msTransitionEnd transitionend', function() {
+				$('body').removeClass('js-no-scroll');
+				$('.projects').toggleClass('projects--loading-project');
+				$('#project-content').empty();
+			});
+			
+		});
+	</script>
+</html>
