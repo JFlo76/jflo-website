@@ -23,7 +23,7 @@ $(document).ready(function(){
 	
 
 	$('.content-link').on('click', function() {
-		$('#about-2').goTo(0);
+		$('#about-2').goTo(44);
 	});
 
 	$(document).on('keydown', checkKey);

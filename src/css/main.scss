@@ -148,6 +148,11 @@ header {
 			a {
 				padding: 0 2rem;
 				display: block;
+				color: $black;
+				&:hover {
+					color: $primary-color;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -204,20 +209,39 @@ header {
 .content-link {
     @extend .font-oswald;
     @include accelerated(transform);
+	@include transition(transform);
+	color: $light-gray;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	text-shadow: $text-shadow;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-    }
-    svg {
-    	fill: $light-gray;
-        width: 5.8rem;
-        height: 5.8rem;
-        margin: 0 1.5rem;
-        display: inline-block;
-        position: relative;
-    }
+    border: none;
+	span {
+		// transform: translateZ(0);
+		// -webkit-transform: translateZ(0);
+		// transition: transform .2s, filter .2s;
+		// -webkit-transition: -webkit-transform .2s, -webkit-filter .2s;
+		// filter: drop-shadow(0 10px 8px rgba(0,0,0,.5));
+		// -webkit-filter: drop-shadow(0 10px 8px rgba(0,0,0,.5));
+	    svg {
+	    	fill: $light-gray;
+	        width: 5.8rem;
+	        height: 5.8rem;
+	        margin: 0 1.5rem;
+	        display: inline-block;
+	        position: relative;
+	    }
+	}
+	&:hover {
+		cursor: pointer;
+		// span {
+		// 	transform: translateY(5%), ;
+		// 	filter: drop-shadow(0 5px 3px rgba(0,0,0,.75));
+		// 	-webkit-filter: drop-shadow(0 5px 3px rgba(0,0,0,.75));
+		// }
+	}
+
 }
 
 .hero-wrapper {
@@ -281,26 +305,16 @@ header {
     // Mobile Landscape =================================== //
 	@media only screen and (orientation: landscape) and (max-width: $screen-xs-max) {
 		height: calc(100vh - 11rem);
-		margin-top: 5.5rem;
 		.text {
-			transform: translateY(-75%);
+			transform: translateY(-55%);
 		}
 		.content-link {
-			@include transition(transform);
+			color: $light-gray;
+			display: flex;
 			position: absolute;
 			bottom: 25%;
 			left: 50%;
 			transform: translateX(-50%);
-			color: $light-gray;
-			font-weight: bold;
-			display: flex;
-			span {
-				@include transition(transform);
-			}
-			&:hover span {
-				text-decoration: none;
-				transform: translateY(45%);
-			}
 		}
 		&:before {
 			content: none;
@@ -325,16 +339,12 @@ header {
 			}
 		}
 		.content-link {
-			@include transition(transform);
 			position: absolute;
 			bottom: 25%;
 			left: 50%;
 			transform: translateX(-50%);
 			color: $light-gray;
-			font-weight: bold;
 			display: flex;
-			align-items: center;
-			text-shadow: $text-shadow;
 			span {
 				transform: translateZ(0);
 				-webkit-transform: translateZ(0);
@@ -342,6 +352,7 @@ header {
 				-webkit-transition: -webkit-transform .2s, -webkit-filter .2s;
 				filter: drop-shadow(0 10px 8px rgba(0,0,0,.5));
 				-webkit-filter: drop-shadow(0 10px 8px rgba(0,0,0,.5));
+
 			}
 			&:hover {
 				span {
@@ -349,6 +360,7 @@ header {
 					filter: drop-shadow(0 5px 3px rgba(0,0,0,.75));
 					-webkit-filter: drop-shadow(0 5px 3px rgba(0,0,0,.75));
 				}
+
 			}
 		}
 
@@ -369,7 +381,6 @@ header {
 			font-size: 8vw;
 		}
 		.btn {
-			// font-size: 4.5vw;
 			margin-bottom: 2rem;
 		}
 		.btn-resume {
@@ -447,10 +458,6 @@ header {
 		}
 		.btn {
 			margin-bottom: 1rem;
-			// Mobile & Portrait ================ //
-			// @media only screen and (orientation: portrait) and (max-width: $screen-sm-max) {
-			// 	font-size: 6vw;
-			// }
 			svg {
 				fill: #fff;
 				height: .8em;
@@ -481,7 +488,7 @@ header {
 .projects {
 	margin: 5.5rem 0;
 	padding-top: 2rem;
-	padding-bottom: 5.5rem;
+	padding-bottom: 0;
 	background-color: $med-gray;
 	position: relative;
 	// Desktop ========================= //
@@ -564,7 +571,7 @@ header {
 			position: relative;
 			z-index: 5;
 			height: 100%;
-			padding: 2rem 0;
+			padding: 0;
 			opacity: 0;
 			transition: .5s opacity;
 			overflow: scroll;
@@ -573,18 +580,56 @@ header {
 			}
 			h1 {
 				display: inline-block;
-
+				margin: 0;
 			}
-			hr {
-				margin-top: 0;
-			}
-			a {
-				color: $primary-color;
-				border-bottom: 1px solid $primary-color;
-				padding-bottom: 2px;
-				&:hover {
-					color: lighten($primary-color, 10%);
-					border-color: lighten($primary-color, 10%);
+			// hr {
+			// 	margin-top: 0;
+			// }
+			.container-fluid {
+				padding: 0;
+				// padding-top: 2rem;
+				// padding-bottom: 2rem;
+				.row {
+					padding: 2rem 0;
+					margin-left: 0;
+					margin-right: 0;
+					&:nth-child(even) {
+						background-color: $med-dark-gray;
+					}
+					img {
+						margin-bottom: 2rem;
+					}
+					.content-link {
+						display: none;
+						// background-color: $primary-color;
+						// margin: 0 -2rem -2rem;
+						// padding: 2rem;
+						// font-size: 7vw;
+						// justify-content: center;
+						// span {
+						// 	display: none;
+						// }
+					}
+					.mobile-banner {
+						@extend .font-oswald;
+						background-color: $primary-color;
+						padding: 2rem;
+						margin-bottom: -2rem;
+						font-size: 7vw;
+						text-transform: uppercase;
+						text-align: center;
+						// &:after {
+						// 	content: "";
+						// 	position: absolute;
+						// 	left: 0;
+						// 	top: 100%;
+						// 	width: 0;
+						// 	height: 0;
+						// 	border-style: solid;
+						// 	border-width: 50px 50% 0 50%;
+						// 	border-color: #007bff transparent transparent transparent;
+						// }
+					}
 				}
 			}
 		}
@@ -628,7 +673,38 @@ header {
 			top: 7.5rem;
 			height: calc(100vh - 16rem);
 			#project-content {
-				padding: 4rem;
+				padding: 0;
+				.container-fluid {
+					padding: 0;
+					.row {
+						min-height: calc(100vh - 16rem);
+						padding: 4rem 2rem;
+						margin-left: 0;
+						margin-right: 0;
+						// &:nth-child(even) {
+						// 	background-color: $med-dark-gray;
+						// }
+						.content-link {
+							background-color: transparent;
+							font-size: inherit;
+							display: flex;
+							justify-content: center;
+							span {
+								display: block;
+							}
+							&:hover {
+								color: #fff;
+								svg {
+									fill: #fff;	
+								}
+								
+							}
+						}
+						.mobile-banner {
+							display: none;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -644,5 +720,11 @@ header {
 				transform: translateY(0%);
 			}
 		}
+	}
+}
+.table-responsive {
+	margin: 2rem 0;
+	.yep {
+		background-color: $secondary-color;
 	}
 }
