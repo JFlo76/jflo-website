@@ -69,5 +69,15 @@ hr, .hr--light {
 .hr--dark {
     border-color: $med-dark-gray;
 }
-
+.table-responsive {
+    margin: 2rem 0;
+    .table {
+        td {
+            margin: 1rem;
+        }
+    }
+    .yep {
+        background-color: $secondary-color;
+    }
+}
 
