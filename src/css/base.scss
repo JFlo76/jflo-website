@@ -3,7 +3,7 @@
 @import 'typography';
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
     margin: 0;
 }
 
@@ -21,7 +21,7 @@ html {
 
 @media only screen and (min-width: $screen-lg-min) {
     html {
-        font-size: 10px;
+        font-size: 62.5%;
     }
 }
 html {

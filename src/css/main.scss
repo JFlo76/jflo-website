@@ -508,6 +508,8 @@ header {
 		min-height: calc(100vh - 16rem);
 		padding-top: 4rem;
 		padding-bottom: 0;
+		display: flex;
+		align-items: center;
 		&:first-of-type {
 			margin-top: 7.5rem;
 			margin-bottom: 0;
@@ -601,11 +603,13 @@ header {
 				padding: 0;
 				.row {
 					padding: 2rem 0;
-					margin-left: 0;
-					margin-right: 0;
+					margin: 0 auto;
+					max-width: 1440px;
+/*
 					&:nth-child(even) {
 						background-color: $med-dark-gray;
 					}
+*/
 					img {
 						margin-bottom: 2rem;
 					}
@@ -671,10 +675,14 @@ header {
 				.container-fluid {
 					padding: 0;
 					.row {
-						min-height: calc(100vh - 16rem);
+// 						min-height: calc(100vh - 16rem);
 						padding: 4rem 2rem;
-						margin-left: 0;
-						margin-right: 0;
+// 						margin: 0 auto;
+/*
+						&:nth-child(even) {
+							background-color: inherit;
+						}
+*/
 						.content-link {
 							background-color: transparent;
 							font-size: inherit;
