@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Hitachi</h1>
+					<span class="btn--js-close-project">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
+							<line class="st0" x1="0" y1="0" x2="45" y2="45"/>
+							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
+						</svg>
+					</span>
+				<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-6">
+					<div class="slick-slider">
+						<div class="content">
+							<img src="/img/projects/hitachi-home.jpg"
+							srcset="/img/projects/hitachi-home-2x.jpg 2x, 
+							/img/projects/hitachi-home-3x.jpg 3x">
+							<span class="slick-slide__project-description">Landing Page</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-assets.jpg"
+							srcset="/img/projects/hitachi-assets-2x.jpg 2x, 
+							/img/projects/hitachi-assets-3x.jpg 3x">
+							<span class="slick-slide__project-description">Inventory Page with Filter and Search</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-asset-details.jpg"
+							srcset="/img/projects/hitachi-asset-details-2x.jpg 2x, 
+							/img/projects/hitachi-asset-details-3x.jpg 3x">
+							<span class="slick-slide__project-description">Inventory Details Page with Sensor Picker</span>
+						</div>
+					</div>
+				</div>
+				<div class="project-description col col-sm-6">
+					<h2>Overview</h2>
+					<p>Hitachi is heavily investing in the IoT marketplace and the first step was to build Lumada, a platform for data visualization of industrial machinery.</p>
+					<p>I was brought in as a contractor at the design phase to help design and then build the UI for the software. Deliverables included sitemaps, userflows, wireframes, prototypes, hi-rez comps, styleguide/pattern library, and production-ready code.  
+					<hr class="hr--dark"/>
+					<a href="https://www.hitachiinsightgroup.com" class="btn btn-primary right" target="_blank">View marketing site</a>
+					<p>Toolkit: Sketch, Adobe XD, NPM, Grunt, Git, HTML, SASS, AngularJS</p>
+					<p>Project Status: Alpha (released 4/17/2017)</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Design Phase</h1>
+					<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-4">
+					<p>Initially, the plan was to build a dashboard for quick insights and overviews, data aggregation, and geo-location for devices that are connected to the Lumada platform (see first image). From there, the user would be able to drill directly down to the device details, or navigate to the inventory pages (second image).</p>
+					<p>For the MVP release however, the main priority was to set up the ability to create and manage digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform. The dashboard feature is scheduled for the beta release.</p>
+					
+				</div>
+				<div class="col col-sm-4">
+					<img src="/img/projects/hitachi-dashboard-whiteboard.jpg" class="project-image">
+				</div>
+				<div class="col col-sm-4">
+					<img src="/img/projects/hitachi-userflow-whiteboard.jpg" class="project-image">
+				</div>
+			</div>
+<!--
+			<div class="row">
+				
+				<div class="col col-sm-12">
+					<img src="/img/projects/hitachi-site-map-2.jpg">
+				</div>
+			</div>
+-->
+			<div class="row">
+				<div class="col col-sm-4">
+					<p>Based on preliminary info from the PMs and engineers, the process for creating new Asset Avatars was coupled to the creation of an Asset Type (classification of device; e.g. "truck” or “printer") and whether the device needed a gateway to connect to the platform. Because of this, I suggested the user would need a guided pathway for successful creation of their inventory.</p>
+					<p>Later on, the engineers were able to remove some of the dependencies around these, so the UI changed to a self-guided type, where the user could choose what they wanted to create first. Since the user profiles for the MVP were going to be Hitachi engineers who would receive training on the product, we felt this was an appropriate decision.</p>
+ 
+				</div>
+				<div class="col col-sm-8">
+					<img src="/img/projects/hitachi-landingpage-wireframe.jpg" class="project-image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-6">
+					<img src="/img/projects/hitachi-assets-wireframe.jpg">
+				</div>
+				<div class="col col-sm-6">
+					<img src="/img/projects/hitachi-AssetDetails_Historical.jpg">
+				</div>
+				<div class="col col-sm-6">
+					<img src="/img/projects/hitachi-AssetDetails_Events.jpg">
+				</div>
+				<div class="col col-sm-6">
+					<img src="/img/projects/hitachi-AssetDetails_LastKnownState3.jpg">
+				</div>
+			</div>
+	</body>
+
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			prevArrow: '<button class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10.7 -1.4 24.6 46.4" xml:space="preserve" class="icon-arrow" icon-arrow--left"><polyline points="13.2,44.3 -9.3,21.8 13.2,-0.7 "/></svg></button>',
+			nextArrow: '<button class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.6 46.4" xml:space="preserve" class="icon-arrow"><polyline points="0.7,0.7 23.2,23.2 0.7,45.7 "/></svg></button>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+					}
+				},
+			],
+		});
+
+		$('.btn--js-close-project').on('click', function() {
+			$('#project-content').toggleClass('fade-in');
+			
+			$('#project-content').one('msTransitionEnd transitionend', function() {
+				$('body').removeClass('js-no-scroll');
+				$('.projects').toggleClass('projects--loading-project');
+				$('#project-content').empty();
+			});
+			
+		});
+
+		// Smooth scroll to section
+		$.fn.goTo = function(offset) {
+			$('#project-content').animate({
+	            scrollTop: ($(this).offset().top - offset) + 'px'
+	        }, 500);
+	        return this; // for chaining...
+	    }
+		$('.content-link').on('click', function() {
+			$('#case-study').goTo(75);
+		});
+
+	</script>
+</html>

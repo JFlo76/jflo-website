@@ -18,19 +18,19 @@ module.exports = function(grunt) {
             },
             css: {
                 files: 'src/**/*.scss',
-                tasks: ['sass'],
+                tasks: ['newer:sass'],
             },
             html: {
                 files: 'src/**/*.html',
-                tasks: ['copy:html'],
+                tasks: ['newer:copy:html'],
             },
             scripts: {
                 files: 'src/**/*.js',
-                tasks: ['uglify'],
+                tasks: ['newer:uglify'],
             },
             images: {
                 files: 'src/**/*.{png,jpg,gif}',
-                tasks: ['imagemin']
+                tasks: ['newer:imagemin']
             }
         },
         copy: {
@@ -51,6 +51,7 @@ module.exports = function(grunt) {
                     livereload: true,
                     base: 'build',
                     port: 6600,
+                    open: true
                 },
             },
         },
@@ -98,6 +99,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-newer');
 
     // Start web server
     grunt.registerTask('default', [
