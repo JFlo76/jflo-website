@@ -588,7 +588,7 @@ header {
 			padding: 0;
 			opacity: 0;
 			transition: .5s opacity;
-			overflow: scroll;
+			overflow: auto;
 			&.fade-in {
 				opacity: 1;
 			}
@@ -599,20 +599,12 @@ header {
 			.project-image {
 				margin-top: 5px;
 			}
-			// hr {
-			// 	margin-top: 0;
-			// }
 			.container-fluid {
 				padding: 0;
 				.row {
 					padding: 2rem 0;
 					margin: 0 auto;
 					max-width: 1440px;
-/*
-					&:nth-child(even) {
-						background-color: $med-dark-gray;
-					}
-*/
 					img {
 						margin-bottom: 2rem;
 					}
@@ -712,9 +704,12 @@ header {
 	}
 	&.projects--loading-project {
 		#project-loader {
-			overflow-y: scroll;
+			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			pointer-events: auto;
+			&.hide-overflow {
+				overflow: hidden;
+			}
 			&:before {
 				transform: translateY(0%);
 			}

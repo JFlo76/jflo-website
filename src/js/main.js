@@ -58,9 +58,11 @@ $(document).ready(function(){
 	$('.project-card').on('click', function() {
 		$('.projects').toggleClass('projects--loading-project');
 		var dataUrl = $(this).data('url');
+		$('#project-loader').addClass('hide-overflow');
 		$('#project-loader').one('msTransitionEnd transitionend', function() {
 			// Prevent body from scrolling behind the modal
 			$('body').addClass('js-no-scroll');
+			$(this).removeClass('hide-overflow');
 			$('#project-content').load(dataUrl, function(response, status, xhr) {
 				$(this).toggleClass('fade-in');
 			});
