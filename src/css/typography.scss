@@ -43,3 +43,8 @@ a {
 }
 ::-moz-selection { background: $secondary-color; }
 ::selection { background: $secondary-color; }
+
+.quotes {
+	font-style: italic;
+	font-weight: bold;
+}

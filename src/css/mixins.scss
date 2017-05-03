@@ -11,3 +11,7 @@
 	-o-transform: translateZ(0);
 	transform: translateZ(0);
 }
+
+@mixin transition($args...) {
+	transition: $args;
+}

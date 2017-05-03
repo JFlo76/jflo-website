@@ -38,11 +38,11 @@
 				<div class="project-description col col-sm-6">
 					<h2>Overview</h2>
 					<p>Hitachi is heavily investing in the IoT marketplace and the first step was to build Lumada, a platform for data visualization of industrial machinery.</p>
-					<p>I was brought in as a contractor at the design phase to help design and then build the UI for the software. Deliverables included sitemaps, userflows, wireframes, prototypes, hi-rez comps, styleguide/pattern library, and production-ready code.  
+					<p>I was brought in as a contractor at the design phase to help design and then build the UI for the software. Deliverables included sitemaps, userflows, wireframes, lo-fi prototypes, hi-rez comps, styleguide/pattern library, and production-ready code.
 					<hr class="hr--dark"/>
-					<a href="https://www.hitachiinsightgroup.com" class="btn btn-primary right" target="_blank">View marketing site</a>
-					<p>Toolkit: Sketch, Adobe XD, NPM, Grunt, Git, HTML, SASS, AngularJS</p>
-					<p>Project Status: Alpha (released 4/17/2017)</p>
+					<a href="https://www.hitachiinsightgroup.com" class="btn btn-primary right right--left-margin" target="_blank">View marketing site</a>
+					<p>Toolkit: Sketch, Adobe CS, JIRA/Confluence, NPM, Grunt, Git, HTML, SASS, AngularJS</p>
+					<p>Project Status: V.1 (currently internal use only)</p>
 				</div>
 			</div>
 			<div class="row">
@@ -51,51 +51,134 @@
 					<hr class="hr--dark"/>
 				</div>
 				<div class="col col-sm-4">
-					<p>Initially, the plan was to build a dashboard for quick insights and overviews, data aggregation, and geo-location for devices that are connected to the Lumada platform (see first image). From there, the user would be able to drill directly down to the device details, or navigate to the inventory pages (second image).</p>
-					<p>For the MVP release however, the main priority was to set up the ability to create and manage digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform. The dashboard feature is scheduled for the beta release.</p>
+					<p>Initially, the project owners wanted to first build a dashboard landing page for quick insights and overviews, data aggregation, and geo-location for devices that are connected to the Lumada platform (see first image). From there, the user would be able to drill directly down to the device details, or navigate to the inventory pages (second image).</p>
+					<p>But based on user profiles and their primary tasks, the priority for the V.1 release really needed to be the ability to create and manage the digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform. <!-- The dashboard feature is scheduled for the beta release. --></p>
+					<p>Due to this course correction, it became apparent the architecture needed to change by surfacing pages under the "Inventory" section to the main navigation, and the landing page would need to be a starting point for the onboarding process.</p>
 					
 				</div>
 				<div class="col col-sm-4">
 					<img src="/img/projects/hitachi-dashboard-whiteboard.jpg" class="project-image">
 				</div>
 				<div class="col col-sm-4">
-					<img src="/img/projects/hitachi-userflow-whiteboard.jpg" class="project-image">
+					<img src="/img/projects/hitachi-dashboard-workflow.png" class="project-image">
+					<!-- <img src="/img/projects/hitachi-userflow-whiteboard.jpg" class="project-image"> -->
 				</div>
 			</div>
-<!--
+
 			<div class="row">
-				
 				<div class="col col-sm-12">
 					<img src="/img/projects/hitachi-site-map-2.jpg">
 				</div>
 			</div>
--->
+
 			<div class="row">
-				<div class="col col-sm-4">
-					<p>Based on preliminary info from the PMs and engineers, the process for creating new Asset Avatars was coupled to the creation of an Asset Type (classification of device; e.g. "truck” or “printer") and whether the device needed a gateway to connect to the platform. Because of this, I suggested the user would need a guided pathway for successful creation of their inventory.</p>
-					<p>Later on, the engineers were able to remove some of the dependencies around these, so the UI changed to a self-guided type, where the user could choose what they wanted to create first. Since the user profiles for the MVP were going to be Hitachi engineers who would receive training on the product, we felt this was an appropriate decision.</p>
+				<div class="col col-sm-6">
+					<p>Based on preliminary info from the PMs and engineers, the process for creating new Asset Avatars was coupled to the creation of an Asset Type (classification of device; e.g. "truck” or “printer") and whether the device needed a gateway to connect to the platform. Because of this, I suggested the user would need some help for successful creation of their inventory.</p>
+					<p>We contemplated doing inline help popups, but it still left a margin for error with the user. I recommended using a walkthrough approach, with sequential steps so the user would be encouraged to complete the critical first steps for populating their inventory.</p>
+					<p>Later on, the engineers were able to remove some of the dependencies around these, so the UI changed to a self-guided type, where the user could choose what they wanted to create first. Since the user profiles for V.1 were going to be Hitachi engineers who would receive training on the product, we felt this was an appropriate decision.</p>
  
 				</div>
-				<div class="col col-sm-8">
-					<img src="/img/projects/hitachi-landingpage-wireframe.jpg" class="project-image">
+				<div class="col col-sm-6">
+					<div class="slick-slider">
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-1.png">
+							<span class="slick-slide__project-description">Onboarding - Step 1</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-2.png">
+							<span class="slick-slide__project-description">Onboarding - Step 2</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-3.png">
+							<span class="slick-slide__project-description">Onboarding - Step 3</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-4.png">
+							<span class="slick-slide__project-description">Onboarding - Step 4</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-5.png">
+							<span class="slick-slide__project-description">Onboarding - Step 5</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-6.png">
+							<span class="slick-slide__project-description">Onboarding - Step 6</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-7.png">
+							<span class="slick-slide__project-description">Onboarding - Step 7</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-onboarding-8.png">
+							<span class="slick-slide__project-description">Onboarding - Step 8</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col col-sm-6">
-					<img src="/img/projects/hitachi-assets-wireframe.jpg">
+				<div class="col col-sm-12">
+					<h1>Design Challenges</h1>
+					<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-4">
+					<p>The first main challenge I faced was around the design strategy of the UI. The project managers had prioritized the targeted screen sizes for V.1 as 1) Desktop 2) Tablet 3) Phone.</p>
+					<p>This approach is generally backwards to how modern web apps are designed. I tried to convince them that we should take a mobile first approach if they wanted to support phones in the future, but they felt the deadline for the project wouldn't allow for it.</p>
+					<p>Luckily for me, I've dealt with this type of situation before, and I knew how to design and build the UI in a way that would allow for retrofitting the layout for mobile. For my own reference, I had made a few wireframes for the mobile layout.</p>
+					
+				</div>
+				<div class="col col-sm-8">
+					<img src="/img/projects/hitachi-desktop-mobile.png" class="project-image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-4">
+					<p>Another challenge I faced was around the Asset Data page, which needed to have the following features:</p>
+					<ul>
+						<li>Visualization of the device sensors, which are imported as a JSON file. This file structure, (or schema) is up to the user, so can potentially be a deeply nested tree.</li>
+						<li>The ability to select each sensor within the tree structure for plotting the data into a graph.</li>
+						<li>The ability for the user to toggle between real-time and historical data.</li>
+						<li>The ability for the user to choose a period of time for historical data.</li>
+					</ul>
+					<p>I did some research into how to best display a tree structure in a UI, including some D3.js options, but the devs were already committed to using Highcharts for their data visualization and adding another charting library was too expensive.</p>
+					<p>The solution I decided on was a nested folder/file type UI that was wide enough to accommodate deeply nested items. This pattern is easy to understand and widely known, plus I knew the it could be built using nothing but HMTL and CSS.</p>
+				</div>
+				<div class="col col-sm-8">
+					<img src="/img/projects/hitachi-Assets_Details_SensorData-Expanded.jpg" class="project-image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Development Phase</h1>
+					<hr class="hr--dark"/>
+				</div>
+				<!-- <div class="col col-sm-6">
+					<p>My role during the development phase was to build out the UI using HTML, CSS and some light JavaScript in coordination with the front-end devs who were doing the heavy JavaScript work using AngularJS.</p>
 				</div>
 				<div class="col col-sm-6">
-					<img src="/img/projects/hitachi-AssetDetails_Historical.jpg">
+					<p>In order to keep the code modular, we used SASS as a preprocessor for the CSS, adopted the BEM naming convention for our CSS classes, and a modified version of Atomic design for our overall design pattern hierarchy.</p>
+				</div> -->
+				<!-- <div class="col col-sm-4">
+					<p>I wanted to avoid using Bootstrap to save some kilobytes, but there were still components that we needed (such as date pickers and modals) so we added them as needed, a la carte. The engineers wanted to utilize the Angular's UI Bootstrap, which has the Bootstrap components built out as Angular directives, which helped integrate them easily into the app.</p>
+				</div> -->
+
+			<!-- </div>
+			<div class="row"> -->
+				<div class="col col-sm-6">
+					<p>My role during the development phase was to build out the UI using HTML, CSS and some light JavaScript using AngularJS in coordination with the front-end devs who were doing the heavy JavaScript work.</p>
+					<p>In order to keep the code modular, we used SASS as a preprocessor for the CSS, adopted the BEM naming convention for our CSS classes, and a modified version of Atomic design for our overall design pattern hierarchy.</p>
+					<p>I wanted to avoid using Bootstrap to save some kilobytes, but there were still components that we needed (such as date pickers and modals) so we added them as needed, a la carte. The engineers wanted to utilize Angular's UI Bootstrap, which has the Bootstrap components built out as Angular directives, which helped integrate them easily into the app.</p>
+					<p>I also set up a living style guide using the <a href="http://styleguide.sc5.io/" target="_blank">SC5 style guide generator</a>. This automates some of the build for the style guide and makes it easier to maintain and contribute to, because the markup is included within the file for each part of the UI and generated via Grunt/Gulp task runners.</p>
+					<h2>Conclusion</h2>
+					<hr class="hr--dark"/>
+					<p>Given the size of the team and the deadline imposed upon us, we put together a great V.1 application. In just over 4 months, we built out the foundation for Hitachi's new IoT platform, Lumada, and the stake holders were thrilled at what we accomplished.</p>
+					<p>My team lead informed us that when he presented the application to the Hitachi CEO, he was quoted as saying, <span class="quotes">"This is the best time I've ever had in the U.S."</span></p>
 				</div>
 				<div class="col col-sm-6">
-					<img src="/img/projects/hitachi-AssetDetails_Events.jpg">
-				</div>
-				<div class="col col-sm-6">
-					<img src="/img/projects/hitachi-AssetDetails_LastKnownState3.jpg">
+					<img src="/img/projects/hitachi-style-guide-parts.png" class="project-image">
 				</div>
 			</div>
 	</body>
-
+	<script src="/js/main.min.js"></script>
 	<script type="text/javascript">
 		$('.slick-slider').slick({
 			arrows: true,
@@ -113,27 +196,26 @@
 			],
 		});
 
-		$('.btn--js-close-project').on('click', function() {
-			$('#project-content').toggleClass('fade-in');
+		// $('.btn--js-close-project').on('click', function() {
+		// 	$('#project-content').toggleClass('fade-in');
+		// 	$('#project-content').one('msTransitionEnd transitionend', function() {
+		// 		$('body').removeClass('js-no-scroll').removeClass('project-loaded');
+		// 		$('.projects').toggleClass('projects--loading-project');
+		// 		$('#project-content').empty();
+		// 	});
 			
-			$('#project-content').one('msTransitionEnd transitionend', function() {
-				$('body').removeClass('js-no-scroll');
-				$('.projects').toggleClass('projects--loading-project');
-				$('#project-content').empty();
-			});
-			
-		});
+		// });
 
 		// Smooth scroll to section
-		$.fn.goTo = function(offset) {
-			$('#project-content').animate({
-	            scrollTop: ($(this).offset().top - offset) + 'px'
-	        }, 500);
-	        return this; // for chaining...
-	    }
-		$('.content-link').on('click', function() {
-			$('#case-study').goTo(75);
-		});
+		// $.fn.goTo = function(offset) {
+		// 	$('#project-content').animate({
+	 //            scrollTop: ($(this).offset().top - offset) + 'px'
+	 //        }, 500);
+	 //        return this; // for chaining...
+	 //    }
+		// $('.content-link').on('click', function() {
+		// 	$('#case-study').goTo(75);
+		// });
 
 	</script>
 </html>

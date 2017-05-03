@@ -5,9 +5,6 @@
 @import 'mixins';
 @import 'slick-slider';
 
-@mixin transition($prop) {
-	transition: $prop .2s ease-out;
-}
 .browser-warning {
 	width: 80%;
 	position: absolute;
@@ -33,6 +30,12 @@
 }
 .right {
 	float: right;
+	&.right--left-margin {
+		// Desktop ============================================= //
+		@media only screen and (min-width: $screen-sm-min) {
+			margin-left: 2rem;
+		}
+	}
 }
 .left {
 	float: left;
@@ -48,7 +51,21 @@ body {
 	&.js-no-scroll {
 		overflow: hidden;
 	}
-	// @include accelerated();
+	&.project-loaded header {
+		// Desktop ============================================= //
+		@media only screen and (min-width: $screen-sm-min) {
+			height: 5.5rem;
+			padding: 1.5rem 4rem;
+		}
+	}
+	&.project-loaded .main-navigation {
+		// Desktop ================================================ //
+		@media only screen and (min-width: $screen-sm-min) {
+			transform: translateY(81px);
+			// height: 5.5rem;
+			// line-height: 5.5rem;
+		}
+	}
 }
 section {
 	padding-top: 5.5rem;
@@ -58,8 +75,19 @@ section {
 		padding-top: 7.5rem;
 		padding-bottom: 8.5rem;
 	}
+	&.loading-project {
+		// Desktop ============================================= //
+		@media only screen and (min-width: $screen-sm-min) {
+			// padding-top: 5.5rem;
+			// padding-bottom: 5.5rem;
+		}
+
+	}
 }
 header {
+    @include accelerated(height);
+    @include accelerated(padding);
+	@include transition(all .5s ease-in-out);
 	background-color: #fff;
 	width: 100%;
 	height: 5.5rem;
@@ -87,6 +115,7 @@ header {
 		float: right;
 		img {
 			height: 100%;
+			float: right;
 		}
 
 	}
@@ -115,6 +144,9 @@ header {
 	}
 }
 .main-navigation {
+    // @include accelerated(height);
+    // @include accelerated(line-height);
+	@include transition(transform .5s ease-in-out);
 	font: {
 		size: 1.8rem;
 		family: 'Oswald', sans-serif;
@@ -221,7 +253,7 @@ header {
 .content-link {
     @extend .font-oswald;
     @include accelerated(transform);
-	@include transition(transform);
+	@include transition(transform .2s ease-out);
 	color: $light-gray;
 	font-weight: bold;
 	display: flex;
@@ -267,11 +299,12 @@ header {
 		color: $light-gray;
 		padding-left: 0;
 		padding-right: 0;
-		h1 {
+		h1, h2 {
 			@extend .font-oswald;
 			span {
 				color: $primary-color;
 				text-shadow: $text-shadow;
+				font-weight: bold;
 			}
 		}
 	}
@@ -300,14 +333,18 @@ header {
     }
 	.text {
 		top: 40%;
-		left: 14%;
+		left: 20%;
 		text-align: right;
 		display: inline-block;
 		h1 {
 			font-size: 5vw;
 			line-height: 1;
 			&:first-of-type {
-				font-size: 6vw;
+				// font-size: 6vw;
+			}
+			&:first-child {
+				text-transform: uppercase;
+				font-weight: bold;
 			}
 		}
 	}
@@ -348,6 +385,10 @@ header {
 				span {
 					color: lighten($primary-color, 0%);
 				}
+				// &:first-child {
+				// 	text-transform: uppercase;
+				// 	font-weight: bold;
+				// }
 			}
 		}
 		.content-link {
@@ -389,7 +430,13 @@ header {
 			color: $primary-color;
 			text-shadow: $text-shadow;
 		}
-		h1, h2 {
+		h1 {
+			font-size: 8vw;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		h2 {
 			font-size: 8vw;
 		}
 		.btn {
@@ -423,16 +470,20 @@ header {
 		height: auto;
 		border-top: 0;
 		font-size: 2vw;
+		display: flex;
+		align-items: center;
 		.text {
-			top: 3rem;
-			left: 0;
+			// top: 3rem;
+			// left: 0;
+			max-width: 1440px;
+			// transform: translateY(-50px);
 			padding: 0 2rem;
 			color: $light-gray;
 			h1 {
 				font-size: 3.8vw;
 			}
 			h2 {
-				font-size: 2.5vw;
+				font-size: 4vw;
 			}
 			.btn {
 				font-size: inherit;
@@ -503,20 +554,27 @@ header {
 	padding-bottom: 0;
 	background-color: $med-gray;
 	position: relative;
-	// Desktop ========================= //
+	min-height: calc(100vh - 11rem);
+	// Tablet + ========================= //
 	@media only screen and (min-width: $screen-sm-min) {
 		min-height: calc(100vh - 16rem);
 		padding-top: 4rem;
 		padding-bottom: 0;
+		margin-top: 7.5rem;
+		margin-bottom: 8.5rem;
 		display: flex;
 		align-items: center;
-		&:first-of-type {
-			margin-top: 7.5rem;
-			margin-bottom: 0;
-		}
-		&:last-of-type {
-			margin-bottom: 8.5rem;
-		}
+		// &--loading-project {
+		// 	margin-top: 5.5rem;
+
+		// }
+		// &:first-of-type {
+		// 	margin-top: 7.5rem;
+		// 	margin-bottom: 0;
+		// }
+		// &:last-of-type {
+		// 	margin-bottom: 8.5rem;
+		// }
 		.row {
 			position: relative;
 		}
@@ -524,11 +582,20 @@ header {
 			margin-bottom: 0;
 		}
 	}
+	// Tablet + ========================= //
+	// @media only screen and (min-width: $screen-lg-min) {
+	// 	.row, .col {
+	// 		display: flex;
+	// 	}
+	// }
 	.project-card {
 		box-shadow: 0 20px 2rem -20px rgba(0,0,0,.35);
 		margin-bottom: 4rem;
 		&:hover {
 			cursor: pointer;
+			.project-card__btn {
+				background-color: darken($primary-color, 10%);
+			}
 		}
 		.project-thumbnail {
 			width: 100%;
@@ -539,8 +606,9 @@ header {
 			overflow: auto;
 			display: flex;
 			justify-content: space-between;
+			flex: 1 1 auto;
 			.project-card__copy {
-				flex-grow: 2;
+				flex: 1 1 auto;
 				padding: 1rem;
 				-webkit-transition: flex-grow .2s;
 				transition: flex-grow .2s;
@@ -558,7 +626,7 @@ header {
 				}
 			}
 			.project-card__btn {
-				flex-grow: 1;
+				flex: 0 1 auto;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -566,9 +634,15 @@ header {
 			}
 		}
 		&:hover {
-			footer .project-card__copy {
-				flex-grow: 1;
+			footer .project-card__btn {
+				// flex: 1 0 30%;
+				// font-size: 1.5rem;
 			}
+		}
+		// Desktop ========================= //
+		@media only screen and (min-width: $screen-sm-min) {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 	#project-loader {
@@ -589,13 +663,18 @@ header {
 			opacity: 0;
 			transition: .5s opacity;
 			overflow: auto;
+			// font-size: 1.6rem;
 			&.fade-in {
 				opacity: 1;
 			}
 			h1 {
 				display: inline-block;
 				margin: 0;
+				// font-size: 4rem;
 			}
+			// h2 {
+			// 	font-size: 3.4rem;
+			// }
 			.project-image {
 				margin-top: 5px;
 			}
@@ -638,12 +717,12 @@ header {
 		}
 		&:before {
 			top: 0;
-			height: calc(50vh - 5.5rem);
+			height: calc(50vh - 2.75rem);
 			transform: translateY(-100%);
 		}
 		&:after {
 			bottom: 0;
-			height: calc(50vh - 5.5rem);
+			height: calc(50vh - 2.75rem);
 			transform: translateY(100%);
 		}
 		.btn--js-close-project {
@@ -663,10 +742,17 @@ header {
 		}
 		// Desktop ========================= //
 		@media only screen and (min-width: $screen-md-min) {
-			top: 7.5rem;
-			height: calc(100vh - 16rem);
+			// top: 5.5rem;
+			height: calc(100vh - 5.5rem);
 			#project-content {
 				padding: 0;
+				font-size: 2rem;
+				h1 {
+					font-size: 4rem;
+				}
+				h2 {
+					font-size: 3rem;
+				}
 				.container-fluid {
 					padding: 0;
 					.row {

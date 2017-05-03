@@ -78,7 +78,7 @@
 				</div>
 			</div>
 	</body>
-
+	<script src="/js/main.min.js" defer></script>
 	<script type="text/javascript">
 		$('.slick-slider').slick({
 			arrows: true,
@@ -96,15 +96,15 @@
 			],
 		});
 
-		$('.btn--js-close-project').on('click', function() {
-			$('#project-content').toggleClass('fade-in');
+		// $('.btn--js-close-project').on('click', function() {
+		// 	$('#project-content').toggleClass('fade-in');
 			
-			$('#project-content').one('msTransitionEnd transitionend', function() {
-				$('body').removeClass('js-no-scroll');
-				$('.projects').toggleClass('projects--loading-project');
-				$('#project-content').empty();
-			});
+		// 	$('#project-content').one('msTransitionEnd transitionend', function() {
+		// 		$('body').removeClass('js-no-scroll').removeClass('project-loaded');
+		// 		$('.projects').toggleClass('projects--loading-project');
+		// 		$('#project-content').empty();
+		// 	});
 			
-		});
+		// });
 	</script>
 </html>

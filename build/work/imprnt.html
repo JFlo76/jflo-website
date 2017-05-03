@@ -71,11 +71,13 @@
 					<h1>Analyzing the competition...</h1>
 					<hr class="hr--dark"/>
 				</div>
-				<div class="col col-sm-6">
+				<div class="col col-sm-4">
 					<p>In order to make sure Imprnt was offering competitive services, I did a thorough search online to find a handful of print shops that had high-end websites.</p>
+				</div>
+				<div class="col col-sm-4">
 					<p>These companies all have sites that utilize modern design layouts, elements, and functionality to provide an enjoyable experience and develop a sense of legitimacy and trust with the user (AKA the Aesthetic-Usability Effect).</p>
 				</div>
-				<div class="col col-sm-6">	
+				<div class="col col-sm-4">	
 					<p>The features I included for the comparisons were based on feedback I received from the client about some of his business pain points, as well as his wish list for improving the company's online presence.</p>
 				</div>
 				<div class="col col-sm-12">
@@ -144,7 +146,7 @@
 				</div>
 			</div>
 	</body>
-
+	<script src="/js/main.min.js" defer></script>
 	<script type="text/javascript">
 		$('.slick-slider').slick({
 			arrows: true,
@@ -162,16 +164,16 @@
 			],
 		});
 
-		$('.btn--js-close-project').on('click', function() {
-			$('#project-content').toggleClass('fade-in');
+		// $('.btn--js-close-project').on('click', function() {
+		// 	$('#project-content').toggleClass('fade-in');
 			
-			$('#project-content').one('msTransitionEnd transitionend', function() {
-				$('body').removeClass('js-no-scroll');
-				$('.projects').toggleClass('projects--loading-project');
-				$('#project-content').empty();
-			});
+		// 	$('#project-content').one('msTransitionEnd transitionend', function() {
+		// 		$('body').removeClass('js-no-scroll').removeClass('project-loaded');
+		// 		$('.projects').toggleClass('projects--loading-project');
+		// 		$('#project-content').empty();
+		// 	});
 			
-		});
+		// });
 
 		// Smooth scroll to section
 		$.fn.goTo = function(offset) {
