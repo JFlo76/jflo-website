@@ -35,15 +35,17 @@ module.exports = function(grunt) {
         },
         copy: {
             html: {
-                // files: [
-                    // {    
-                        cwd: 'src',  // set working folder / root to copy
-                        src: '**/*.html',           // copy all files and subfolders
-                        dest: 'build/',    // destination folder
-                        expand: true,           // required when using cwd
-                    // },
-                // ]
+                cwd: 'src',  // set working folder / root to copy
+                src: '**/*.html',           // copy all files and subfolders
+                dest: 'build/',    // destination folder
+                expand: true,           // required when using cwd
             },
+            docs: {
+                cwd: 'src',
+                src: '**/*.pdf',
+                dest: 'build/',
+                expand: true,
+            }
         },
         connect: {
             server: {
@@ -106,7 +108,7 @@ module.exports = function(grunt) {
         'sass',
         'imagemin',
         'uglify',
-        'copy:html',
+        'copy',
         'connect:server',
         'watch'
     ]);
