@@ -5,6 +5,42 @@
 @import 'mixins';
 @import 'slick-slider';
 
+.spinner {
+  width: 80%;
+  height: 10px;
+  margin: 0 auto;
+  position: absolute;
+  transform: scale(0) translate(-50%, -50%) scale(0);
+  transform-origin: 50% 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  background-color: $primary-color;
+
+  // border-radius: 100%;  
+  // -webkit-animation: sk-scaleout .5s infinite ease-in-out;
+  animation: sk-scaleout .5s infinite ease-in-out;
+}
+
+// @-webkit-keyframes sk-scaleout {
+//   0% { -webkit-transform: scale(0) }
+//   100% {
+//     -webkit-transform: scale(1.0);
+//     opacity: 0;
+//   }
+// }
+
+@keyframes sk-scaleout {
+  0% { 
+    // -webkit-transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  } 100% {
+    // -webkit-transform: scale(1.0);
+    transform: translate(-50%, -50%) scale(1.0);
+    opacity: 0;
+  }
+}
+
 .browser-warning {
 	width: 80%;
 	position: absolute;
@@ -88,6 +124,7 @@ header {
     @include accelerated(height);
     @include accelerated(padding);
 	@include transition(all .5s ease-in-out);
+	display: flex;
 	background-color: #fff;
 	width: 100%;
 	height: 5.5rem;
@@ -105,17 +142,17 @@ header {
 	#logo {
 		height: 100%;
 		fill: $primary-color;
-		display: inline-block;
 		img {
 			height: 100%;
 		}
 	}
 	#tagline {
 		height: 100%;
-		float: right;
+		margin-left: auto;
+		text-align: right;
 		img {
 			height: 100%;
-			float: right;
+			margin-left: auto;
 		}
 
 	}
@@ -329,14 +366,14 @@ header {
     &:before {
 	    content: '';
 	    display: block;
-	    padding-top: 56.25%; // 16:9 ratio
+	    padding-top: 28%;
     }
 	.text {
-		top: 40%;
+		top: 25%;
 		left: 20%;
 		text-align: right;
 		display: inline-block;
-		h1 {
+		h1, h2 {
 			font-size: 5vw;
 			line-height: 1;
 			&:first-of-type {
@@ -353,6 +390,7 @@ header {
 	}
     // Mobile Landscape =================================== //
 	@media only screen and (orientation: landscape) and (max-width: $screen-xs-max) {
+		top: 40%;
 		height: calc(100vh - 11rem);
 		.text {
 			transform: translateY(-55%);
@@ -376,11 +414,16 @@ header {
 		background-image: url("../img/computer-desk-lg.jpg");
 		background-position: 50% 80%;
 		height: calc(100vh - 16rem);
+	    &:before {
+		    content: '';
+		    display: block;
+		    padding-top: 56.25%; // 16:9 ratio
+	    }
 		.text {
 			top: 33%;
 			left: 28%;
 			transform: translateY(-40%);
-			h1, h1:first-of-type {
+			h1, h2 {
 				font-size: 3.8vw;
 				span {
 					color: lighten($primary-color, 0%);
@@ -481,6 +524,7 @@ header {
 			color: $light-gray;
 			h1 {
 				font-size: 3.8vw;
+				line-height: 1;
 			}
 			h2 {
 				font-size: 4vw;

@@ -56,16 +56,21 @@ $(document).ready(function(){
 
 	// Open project details ===================== //
 	$('.project-card').on('click', function() {
+		// Prevent body from scrolling behind the modal
 		$('body').addClass('js-no-scroll project-loaded');
 		$('.projects').addClass('projects--loading-project');
 		var dataUrl = $(this).data('url');
 		$('#project-loader').addClass('hide-overflow');
 		$('#project-loader').one('msTransitionEnd transitionend', function() {
 			// $('body').addClass('js-no-scroll project-loaded');
-			// Prevent body from scrolling behind the modal
+			
 			// $('body').addClass('js-no-scroll');
-			$(this).removeClass('hide-overflow');
+			$(this).append('<div class="spinner"></div>').removeClass('hide-overflow');
 			$('#project-content').load(dataUrl, function(response, status, xhr) {
+				// window.addEventListener("load", function(event) {
+				// 	console.info("All resources finished loading!");
+				// });
+				$('.spinner').remove();
 				$(this).addClass('fade-in');
 			});
 		});

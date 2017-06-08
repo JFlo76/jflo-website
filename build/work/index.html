@@ -29,6 +29,12 @@
 			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
 			<link rel="stylesheet" href="/css/main.min.css">
 			<script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+			<script type="text/javascript">
+				window.addEventListener("load", function(event) {
+				    console.info("All resources finished loading!");
+				  });
+				
+			</script>
 		</head>
 		<body>
 			<header>
@@ -92,7 +98,10 @@
 				</div>
 
 				<div id="project-loader">
-					<div id="project-content"/>
+					<!-- <div class="spinner"></div> -->
+					<div id="project-content">
+						
+					</div>
 				</div>
 			</section>
 

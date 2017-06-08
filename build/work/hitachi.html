@@ -1,5 +1,29 @@
 <!doctype html>
 <html>
+	<head>
+		<script type="text/javascript">
+		debugger;
+			window.onload = function() {
+				console.log('loaded');
+			};
+			window.addEventListener("load", function(event) {
+			    console.info("All resources finished loading!");
+			  });
+		  window.addEventListener("onload", function () {
+		  	console.info('onload');
+		  }, false);
+		  //or
+		  document.addEventListener("DOMContentLoaded", function () {
+		  	console.info('DOMContentLoaded');
+		  }, false);
+		  document.onreadystatechange = function () {
+			  console.log(document.readyState);
+			  if (document.readyState === "complete") {
+			    console.log('initApplication();');
+			  }
+			}
+		</script>
+	</head>
 	<body>
 		<div class="container-fluid">
 			<div class="row">
@@ -52,7 +76,7 @@
 				</div>
 				<div class="col col-sm-4">
 					<p>Initially, the project owners wanted to first build a dashboard landing page for quick insights and overviews, data aggregation, and geo-location for devices that are connected to the Lumada platform (see first image). From there, the user would be able to drill directly down to the device details, or navigate to the inventory pages (second image).</p>
-					<p>But based on user profiles and their primary tasks, the priority for the V.1 release really needed to be the ability to create and manage the digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform. <!-- The dashboard feature is scheduled for the beta release. --></p>
+					<p>However, based on user profiles and their primary tasks, the priority for the V.1 release really needed to be the ability to create and manage the digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform.</p>
 					<p>Due to this course correction, it became apparent the architecture needed to change by surfacing pages under the "Inventory" section to the main navigation, and the landing page would need to be a starting point for the onboarding process.</p>
 					
 				</div>
@@ -61,7 +85,6 @@
 				</div>
 				<div class="col col-sm-4">
 					<img src="/img/projects/hitachi-dashboard-workflow.png" class="project-image">
-					<!-- <img src="/img/projects/hitachi-userflow-whiteboard.jpg" class="project-image"> -->
 				</div>
 			</div>
 
@@ -151,18 +174,6 @@
 					<h1>Development Phase</h1>
 					<hr class="hr--dark"/>
 				</div>
-				<!-- <div class="col col-sm-6">
-					<p>My role during the development phase was to build out the UI using HTML, CSS and some light JavaScript in coordination with the front-end devs who were doing the heavy JavaScript work using AngularJS.</p>
-				</div>
-				<div class="col col-sm-6">
-					<p>In order to keep the code modular, we used SASS as a preprocessor for the CSS, adopted the BEM naming convention for our CSS classes, and a modified version of Atomic design for our overall design pattern hierarchy.</p>
-				</div> -->
-				<!-- <div class="col col-sm-4">
-					<p>I wanted to avoid using Bootstrap to save some kilobytes, but there were still components that we needed (such as date pickers and modals) so we added them as needed, a la carte. The engineers wanted to utilize the Angular's UI Bootstrap, which has the Bootstrap components built out as Angular directives, which helped integrate them easily into the app.</p>
-				</div> -->
-
-			<!-- </div>
-			<div class="row"> -->
 				<div class="col col-sm-6">
 					<p>My role during the development phase was to build out the UI using HTML, CSS and some light JavaScript using AngularJS in coordination with the front-end devs who were doing the heavy JavaScript work.</p>
 					<p>In order to keep the code modular, we used SASS as a preprocessor for the CSS, adopted the BEM naming convention for our CSS classes, and a modified version of Atomic design for our overall design pattern hierarchy.</p>
@@ -178,8 +189,16 @@
 				</div>
 			</div>
 	</body>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
 	<script src="/js/main.min.js"></script>
 	<script type="text/javascript">
+		// window.addEventListener("load", function(event) {
+		// 			console.info("All resources finished loading!");
+		// 		});
+		// $(window).on('load', function(){
+		// 	alert('loaded');
+		// });		
 		$('.slick-slider').slick({
 			arrows: true,
 			dots: true,
@@ -195,27 +214,5 @@
 				},
 			],
 		});
-
-		// $('.btn--js-close-project').on('click', function() {
-		// 	$('#project-content').toggleClass('fade-in');
-		// 	$('#project-content').one('msTransitionEnd transitionend', function() {
-		// 		$('body').removeClass('js-no-scroll').removeClass('project-loaded');
-		// 		$('.projects').toggleClass('projects--loading-project');
-		// 		$('#project-content').empty();
-		// 	});
-			
-		// });
-
-		// Smooth scroll to section
-		// $.fn.goTo = function(offset) {
-		// 	$('#project-content').animate({
-	 //            scrollTop: ($(this).offset().top - offset) + 'px'
-	 //        }, 500);
-	 //        return this; // for chaining...
-	 //    }
-		// $('.content-link').on('click', function() {
-		// 	$('#case-study').goTo(75);
-		// });
-
 	</script>
 </html>

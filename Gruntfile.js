@@ -103,6 +103,10 @@ module.exports = function(grunt) {
 
     // Start web server
     grunt.registerTask('default', [
+        'sass',
+        'imagemin',
+        'uglify',
+        'copy:html',
         'connect:server',
         'watch'
     ]);
