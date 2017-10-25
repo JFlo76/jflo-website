@@ -20,6 +20,10 @@ module.exports = function(grunt) {
                 files: 'src/**/*.scss',
                 tasks: ['sass'],
             },
+            fonts: {
+                files: 'src/fonts/*',
+                tasks: ['newer:copy:fonts'],
+            },
             html: {
                 files: 'src/**/*.html',
                 tasks: ['newer:copy:html'],
@@ -29,7 +33,7 @@ module.exports = function(grunt) {
                 tasks: ['newer:uglify'],
             },
             images: {
-                files: 'src/**/*.{png,jpg,gif}',
+                files: 'src/**/*.{png,jpg,gif,svg}',
                 tasks: ['newer:imagemin']
             }
         },
@@ -43,6 +47,12 @@ module.exports = function(grunt) {
             docs: {
                 cwd: 'src',
                 src: '**/*.pdf',
+                dest: 'build/',
+                expand: true,
+            },
+            fonts: {
+                cwd: 'src',
+                src: 'fonts/*',
                 dest: 'build/',
                 expand: true,
             }
@@ -106,7 +116,7 @@ module.exports = function(grunt) {
     // Start web server
     grunt.registerTask('default', [
         'sass',
-        'imagemin',
+        'newer:imagemin',
         'uglify',
         'copy',
         'connect:server',

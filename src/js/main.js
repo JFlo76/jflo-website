@@ -8,6 +8,13 @@ $(document).ready(function(){
 		});
 	}
 
+	$(window).bind('beforeunload', function() {
+
+		// $( "#fadeLink" ).addClass('fadein');      
+
+		alert ("Don't leave yet!");  
+	})
+
 	// $(function() {
 	    // FastClick.attach(document.body);
 	// });

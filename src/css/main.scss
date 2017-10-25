@@ -4,6 +4,7 @@
 @import 'typography';
 @import 'mixins';
 @import 'slick-slider';
+@import 'vendor/entypo-icons/icons';
 
 .spinner {
   width: 80%;
@@ -97,9 +98,9 @@ body {
 	&.project-loaded .main-navigation {
 		// Desktop ================================================ //
 		@media only screen and (min-width: $screen-sm-min) {
-			transform: translateY(81px);
-			// height: 5.5rem;
-			// line-height: 5.5rem;
+			// transform: translateY(81px);
+			height: 5.5rem;
+			line-height: 5.5rem;
 		}
 	}
 }
@@ -183,7 +184,8 @@ header {
 .main-navigation {
     // @include accelerated(height);
     // @include accelerated(line-height);
-	@include transition(transform .5s ease-in-out);
+	@include transition(height .5s ease-in-out, line-height .5s ease-in-out);
+	// @include transition(transform .5s ease-in-out);
 	font: {
 		size: 1.8rem;
 		family: 'Oswald', sans-serif;
@@ -230,6 +232,8 @@ header {
 				padding: 0 2rem;
 				display: block;
 				color: $black;
+				@include accelerated(color);
+				@include transition(color .2s ease-out);
 				&:hover {
 					color: $primary-color;
 					text-decoration: none;
@@ -337,7 +341,8 @@ header {
 		padding-left: 0;
 		padding-right: 0;
 		h1, h2 {
-			@extend .font-oswald;
+			// @extend .font-oswald;
+			font-family: 'Manuale', serif;
 			span {
 				color: $primary-color;
 				text-shadow: $text-shadow;
@@ -424,8 +429,9 @@ header {
 			left: 28%;
 			transform: translateY(-40%);
 			h1, h2 {
-				font-size: 3.8vw;
+				font-size: 3vw;
 				span {
+					font-size: 4vw;
 					color: lighten($primary-color, 0%);
 				}
 				// &:first-child {
@@ -464,7 +470,7 @@ header {
 }
 #about-2 {
 	background-color: $dark-gray;
-	color: #fff;
+	// color: #fff;
 	border-top: 1px solid $med-dark-gray;
 	.text {
 		position: relative;
@@ -475,8 +481,8 @@ header {
 		}
 		h1 {
 			font-size: 8vw;
-			text-transform: uppercase;
-			font-weight: bold;
+			// text-transform: uppercase;
+			// font-weight: bold;
 			margin-bottom: 0;
 		}
 		h2 {
@@ -484,14 +490,20 @@ header {
 		}
 		.btn {
 			margin-bottom: 2rem;
+			.icon {
+				margin-right: 1.6rem;
+			}
 		}
 		.btn-resume {
-			svg {
-				fill: #fff;
-				height: .8em;
-				max-width: 1em;
-				margin-right: .5rem;
+			.icon {
+				margin-right: 1rem;
 			}
+			// svg {
+			// 	fill: #fff;
+			// 	height: .8em;
+			// 	max-width: 1em;
+			// 	margin-right: .5rem;
+			// }
 
 		}
 	}
@@ -507,8 +519,8 @@ header {
 	}
 	// Desktop ============================ //
 	@media only screen and (min-width: $screen-sm-min) {
-		background-image: url("../img/stars-trees-lg.jpg");
-		background-position: 50% 60%;
+		background-image: url("https://images.unsplash.com/photo-1461994319301-06e2de6207c3?dpr=1&auto=compress,format&fit=crop&w=2550&h=&q=80&cs=tinysrgb&crop=");
+		background-position: 50% 50%;
 		min-height: calc(100vh - 16rem);
 		height: auto;
 		border-top: 0;
@@ -521,14 +533,17 @@ header {
 			max-width: 1440px;
 			// transform: translateY(-50px);
 			padding: 0 2rem;
-			color: $light-gray;
-			h1 {
-				font-size: 3.8vw;
-				line-height: 1;
-			}
-			h2 {
+			// color: $light-gray;
+			h1, h2 {
 				font-size: 4vw;
 			}
+			h1 {
+				// font-size: 4vw;
+				line-height: 1;
+			}
+			// h2 {
+			// 	font-size: 4vw;
+			// }
 			.btn {
 				font-size: inherit;
 				margin-right: 2rem;
@@ -596,7 +611,10 @@ header {
 	margin: 5.5rem 0;
 	padding-top: 2rem;
 	padding-bottom: 0;
-	background-color: $med-gray;
+	// background-color: $med-gray;
+	background-image: url("https://images.unsplash.com/photo-1486028502991-23bca1717e62?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=");
+	background-position: 50% 30%;
+	background-size: cover;
 	position: relative;
 	min-height: calc(100vh - 11rem);
 	// Tablet + ========================= //
@@ -607,7 +625,12 @@ header {
 		margin-top: 7.5rem;
 		margin-bottom: 8.5rem;
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		align-items: center;
+		.uppercase {
+			text-transform: uppercase;
+		}
 		// &--loading-project {
 		// 	margin-top: 5.5rem;
 
@@ -707,13 +730,15 @@ header {
 			opacity: 0;
 			transition: .5s opacity;
 			overflow: auto;
+			// display: flex;
+			// flex-direction: column;
 			// font-size: 1.6rem;
 			&.fade-in {
 				opacity: 1;
 			}
 			h1 {
 				display: inline-block;
-				margin: 0;
+				margin: 0 0 4rem;
 				// font-size: 4rem;
 			}
 			// h2 {
@@ -790,7 +815,7 @@ header {
 			height: calc(100vh - 5.5rem);
 			#project-content {
 				padding: 0;
-				font-size: 2rem;
+				font-size: 1.6rem;
 				h1 {
 					font-size: 4rem;
 				}
@@ -798,7 +823,7 @@ header {
 					font-size: 3rem;
 				}
 				.container-fluid {
-					padding: 0;
+					padding: 0 0 4rem;
 					.row {
 // 						min-height: calc(100vh - 16rem);
 						padding: 4rem 2rem;
@@ -847,5 +872,21 @@ header {
 				transform: translateY(0%);
 			}
 		}
+	}
+}
+
+.user-icon {
+	display: flex;
+	&:before {
+		// content: "\ea38";
+		// content: url("../img/icons/003-man.svg");
+		content: "";
+		background-image: url("../img/icons/003-man.svg");
+		background-size: contain;
+		width: 30px;
+		height: 100%;
+		// font-family: "entypo";
+		padding-right: 2rem;
+		// font-size: 3.4rem;
 	}
 }

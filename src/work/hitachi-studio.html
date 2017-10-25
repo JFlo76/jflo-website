@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Hitachi Lumada Studio</h1>
+					<span class="btn--js-close-project">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
+							<line class="st0" x1="0" y1="0" x2="45" y2="45"/>
+							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
+						</svg>
+					</span>
+				<!-- <hr class="hr--dark"/> -->
+				</div>
+				<div class="col col-sm-6">
+					<div class="slick-slider">
+						<div class="content">
+							<img src="/img/projects/hitachi-studio/LumadaStudio-RegionMapActive.png"
+							srcset="/img/projects/hitachi-studio/LumadaStudio-RegionMapActive-2x.png 2x">
+							<span class="slick-slide__project-description">Regional Dashboard View</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-studio/LumadaStudio-LineLevelCopy.png"
+							srcset="/img/projects/hitachi-studio/LumadaStudio-LineLevelCopy-2x.png 2x">
+							<span class="slick-slide__project-description">Line/Cell Level View</span>
+						</div>
+						<div class="content">
+							<img src="/img/projects/hitachi-studio/LumadaStudio-AssetLevelCopy.png"
+							srcset="/img/projects/hitachi-studio/LumadaStudio-AssetLevelCopy-2x.png 2x">
+							<span class="slick-slide__project-description">Asset Level View</span>
+						</div>
+					</div>
+				</div>
+				<div class="project-description col col-sm-6">
+					<h2>Bringing IT to OT</h2>
+					<p>Hitachi’s Lumada Studio is the user interface for the data collected and analyzed on the Lumada Core platform, and is primarily used by people in the manufacturing industry to monitor production for predictive maintenance.</p>
+					<p>The goals for this application included an intuitive interface, data visualization through customizable dashboards, a library of widgets for the charts/graphs, and the ability to generate reports.</p>
+					<!-- <hr class="hr--dark"/> -->
+					<a href="https://invis.io/Z8DL51TVK#/254444077_Lumada_Studio_-_Region_Level" class="btn btn-primary right right--left-margin" target="_blank">View prototype</a>
+					<p>Toolkit: Sketch, InVision<br/>
+					Project Status: Prototype</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-sm-6 col-md-offset-3">
+					<h1>User Research</h1>
+					
+				</div>
+				<!-- <hr class="col col-sm-12 hr--dark"/> -->
+				<div class="col col-sm-6 col-md-offset-3">
+					<p>Before starting any designs, I needed to fully understand the user profiles for a manufacturing plant. I sought out a few Hitachi OT specialists to gain insight on who would be using this application and what they typically do in their day. After a couple of meetings and sleuthing through Confluence documentation, I discovered there were essentially 3 types of user roles:</p>
+					<div style="display: flex; margin-bottom: 2rem;">
+						<div style="flex: 0 1 30%; margin-right: 3rem;">
+							<h2 style="text-align: center;">Admin Adam:</h2>
+							<img src="../img/icons/003-man.svg">
+						</div>
+						<p style="flex: 1;">A technically-inclined power-user who most likely is a lead architect at Hitachi Consulting. He works closely with customers to deploy and configure Studio according to their requirements. He needs to have full access to all aspects of Studio to fulfill his job. Adam has the technical acumen to understand the intricacies of the technologies behind Studio and how to customize it. He also has a strong understanding of all the different Lumada suite of products.</p>
+					</div>
+					<div style="display: flex; margin-bottom: 2rem;">
+						<div style="flex: 0 1 30%; margin-right: 3rem;">
+							<h2 style="text-align: center;">OT Manager Mary:</h2>
+							<img src="../img/icons/001-girl.svg">
+						</div>
+						<div style="flex: 1; display: flex; flex-direction: column;">
+							<p>Mary is an operations manager at Large Rail Operator GmbH. Mary manages a large number of people and multiple production line. She needs to have full visibility of all the operators and needs to be able to manage what her employees have access to on Studio. Mary is not knowledgeable on the technical aspects of Studio but is trained in how to use Studio for her purposes.</p>
+							<ul>
+								<li>Checks work orders per asset</li>
+								<li>Checks news/alert feed</li>
+								<li>Concerned with efficiency & degradation</li>
+								<li>Is proactive to prevent problems</li>
+								<li>Also performs personnel admin management</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div style="display: flex; margin-bottom: 2rem;">
+						<div style="flex: 0 1 30%; margin-right: 3rem;">
+							<h2 style="text-align: center;">OT Operator Eric:</h2>
+							<img src="../img/icons/002-boy.svg">
+						</div>
+						<div style="flex: 1; display: flex; flex-direction: column;">
+							<p>Eric is an operator for Huge Automotive Ltd. He works in the car assembly process, where he is responsible for assembling the seats on the car. As he does his job, he uses Studio to keep an eye on the KPI's for his process. He has a very limited understanding of what Lumada or Studio is. He has very basic training in using Studio.</p>
+							<ul>
+								<li>Mostly concerned with checking for alerts, then following a process for a course of action regarding repair/maintenance</li>
+								<li>Would possibly be alerted by some type of mobile device</li>
+							</ul>
+						</div>
+					</div>
+ 					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-6 col-md-offset-3">
+					<h1><i class="icon icon-key" style="margin-right: 2rem;"></i>Defining the User Permissions</h1>
+					<!-- <hr class="hr--dark"/> -->
+				</div>
+				<div class="col col-sm-6 col-md-offset-3">
+					<p>I knew from previous projects, working as a front-end dev, that user permissions are vital to establish early in the project, so that a designer knows what each user can view, and what each user can perform. There is another application in the works under the Lumada umbrella (the GTM name still hasn’t been locked down) that allows admin users to manage Lumada application templates, which contain the logic to query the APIs and visualize the data. After some more meetings about this, I knew the admin persona wouldn’t even need to touch the Studio UI, but rather should only be working in this one other app, to eliminate app-hopping, and building the dashboards in that app for the Studio environment. The Studio information architecture then became a bit more simple: a mostly read-only application for the OT Operator Eric, with some admin management permissions for Manager Mary.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-6 col-md-offset-3">
+					<h1>Customizing the Experience</h1>
+					<!-- <hr class="hr--dark"/> -->
+				</div>
+				<div class="col col-sm-6 col-md-offset-3">
+					<p>Since the Studio could potentially be used by any industry that wants to collect and visualize data coming from machine sensors, the dashboards needed to be customizable for each client. Our team of engineers chose the open-source project Superset, by Airbnb, to enable a Hitachi consultant (Admin Adam) to configure any arrangement of business intelligence widgets, scoped to an individual user if needed. This level of customization meant that the navigation would be dead simple. I love dead simple.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-6 col-md-offset-3">
+					<h1>Design Phase</h1>
+					<!-- <hr class="hr--dark"/> -->
+				</div>
+				<div class="col col-sm-6 col-md-offset-3">
+					<p>The navigation pattern I envisioned for this application followed a mobile-first approach, where the user simply drills down by interacting with elements in the dashboard, rather than clicking into an unknown amount of nested dropdown menus. To move back, the user can click/tap the “back arrow”, which takes the user back up one level, or the “home” icon which jumps them back to the top level.</p>
+				</div>
+			</div>
+		</div>	
+	</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
+	<script src="/js/main.min.js"></script>
+	<script type="text/javascript">
+		// window.addEventListener("load", function(event) {
+		// 			console.info("All resources finished loading!");
+		// 		});
+		// $(window).on('load', function(){
+		// 	alert('loaded');
+		// });		
+		$('.slick-slider').slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			prevArrow: '<button class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10.7 -1.4 24.6 46.4" xml:space="preserve" class="icon-arrow" icon-arrow--left"><polyline points="13.2,44.3 -9.3,21.8 13.2,-0.7 "/></svg></button>',
+			nextArrow: '<button class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.6 46.4" xml:space="preserve" class="icon-arrow"><polyline points="0.7,0.7 23.2,23.2 0.7,45.7 "/></svg></button>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+					}
+				},
+			],
+		});
+	</script>
+</html>
