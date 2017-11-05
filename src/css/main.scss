@@ -617,8 +617,8 @@ header {
 	margin: 5.5rem 0;
 	padding-top: 2rem;
 	padding-bottom: 0;
-	// background-color: $med-gray;
-	background-image: url("https://images.unsplash.com/photo-1486028502991-23bca1717e62?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=");
+	background-color: $med-gray;
+	// background-image: url("https://images.unsplash.com/photo-1486028502991-23bca1717e62?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=");
 	background-position: 50% 30%;
 	background-size: cover;
 	position: relative;
@@ -758,7 +758,9 @@ header {
 				.row {
 					padding: 2rem 0;
 					margin: 0 auto;
-					max-width: 1440px;
+					&.bg-light {
+						background-color: #4D4D4D;
+					}
 					img {
 						margin-bottom: 2rem;
 					}
@@ -831,14 +833,7 @@ header {
 				.container-fluid {
 					padding: 0 0 4rem;
 					.row {
-// 						min-height: calc(100vh - 16rem);
 						padding: 4rem 2rem;
-// 						margin: 0 auto;
-/*
-						&:nth-child(even) {
-							background-color: inherit;
-						}
-*/
 						.content-link {
 							background-color: transparent;
 							font-size: inherit;
@@ -886,19 +881,41 @@ header {
 	margin-bottom: 2rem;
 	&__left-col {
 		flex: 0 1 auto;
-		margin-right: 3rem;
 		display: flex;
 		flex-direction: column;
+		margin: 0 3rem 0 0;
 	}
 	&__right-col {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
+
 	}
 	&--30 {
 		flex-basis: 30%;
 	}
 	&--50 {
 		flex-basis: 50%;
+	}
+}
+
+.card {
+	background-color: #fff;
+	color: $black;
+	border-radius: .3rem;
+	overflow: hidden;
+	.floated-content__left-col {
+		background-color: $med-gray;
+		padding: 2rem;
+		margin: 0;
+		img, h2 {
+			margin-bottom: 0;
+			line-height: 1.2;
+		}
+
+	}
+	.floated-content__right-col {
+		padding: 2rem;
+		
 	}
 }
