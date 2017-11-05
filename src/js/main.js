@@ -8,46 +8,12 @@ $(document).ready(function(){
 		});
 	}
 
-	$(window).bind('beforeunload', function() {
-
-		// $( "#fadeLink" ).addClass('fadein');      
-
-		alert ("Don't leave yet!");  
-	})
-
-	// $(function() {
-	    // FastClick.attach(document.body);
-	// });
-
-	// Helper functions ==================== //
-	// Smooth scroll to section
-	$.fn.goTo = function(offset) {
-		$('html, body').animate({
-            scrollTop: ($(this).offset().top - offset) + 'px'
-        }, 500);
-        return this; // for chaining...
-    }
-	
-
-	$('.content-link').on('click', function() {
-		$('#about-2').goTo(44);
-	});
-
 	$(document).on('keydown', checkKey);
 
 	function checkKey(e) {
 
 	    e = e || window.event;
-
-	    if (e.keyCode == '38') {
-	        // up arrow
-	        $('#about-1').goTo(75);
-	    }
-	    else if (e.keyCode == '40') {
-	        // down arrow
-	        $('#about-2').goTo(0);
-	    }
-	    else if (e.keyCode == '27') {
+	    if (e.keyCode == '27') {
 			// escape key
 			// Close project details ===================== //
 			$('#project-content').removeClass('fade-in');
@@ -55,6 +21,7 @@ $(document).ready(function(){
 			$('#project-content').one('msTransitionEnd transitionend', function() {
 				$('body').removeClass('js-no-scroll').removeClass('project-loaded');
 				$('.projects').removeClass('projects--loading-project');
+				$('.slick-slider').slick('unslick');
 				$('#project-content').empty();
 			});
 	    }
@@ -69,25 +36,22 @@ $(document).ready(function(){
 		var dataUrl = $(this).data('url');
 		$('#project-loader').addClass('hide-overflow');
 		$('#project-loader').one('msTransitionEnd transitionend', function() {
-			// $('body').addClass('js-no-scroll project-loaded');
 			
-			// $('body').addClass('js-no-scroll');
 			$(this).append('<div class="spinner"></div>').removeClass('hide-overflow');
 			$('#project-content').load(dataUrl, function(response, status, xhr) {
-				// window.addEventListener("load", function(event) {
-				// 	console.info("All resources finished loading!");
-				// });
 				$('.spinner').remove();
 				$(this).addClass('fade-in');
 			});
 		});
 	});
 
+	// Close project details =================== //
 	$('.btn--js-close-project').on('click', function() {
 		$('#project-content').removeClass('fade-in');
 		$('#project-content').one('msTransitionEnd transitionend', function() {
 			$('body').removeClass('js-no-scroll').removeClass('project-loaded');
 			$('.projects').removeClass('projects--loading-project');
+			$('.slick-slider').slick('unslick');
 			$('#project-content').empty();
 		});
 		

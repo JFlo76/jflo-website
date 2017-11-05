@@ -11,7 +11,6 @@
 							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
 						</svg>
 					</span>
-				<hr class="hr--dark"/>
 				</div>
 				<div class="col col-sm-6">
 					<div class="slick-slider">
@@ -36,40 +35,22 @@
 						<li>Make the site more user friendly</li>
 						<li>Provide users the ability to get a customized quote via an online tool</li>
 					</ul>
-					<hr class="hr--dark"/>
-					<p>Toolkit: Sketch, Adobe Illustrator/Photoshop<br/>
-					Project Status: Design Phase</p>
-<!--
-					<a class="content-link">
-						case
-						<span>
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" xml:space="preserve">
-								<path d="M29,0C13,0,0,13,0,29s13,29,29,29s29-13,29-29S45,0,29,0z M48,32.6L29,43.5L10,32.6V21l19,10.9L48,21V32.6z"/>
-							</svg>
-						</span>
-						study
-					</a>
--->
+					<p>Toolkit: Sketch, Adobe Illustrator/Photoshop</p>
 				</div>
-<!-- 				<div class="mobile-banner">case study</div> -->
 			</div>
-			<div class="row">
-				<div class="col col-sm-12">
+			<div class="row bg-light">
+				<div class="col col-sm-12 col-md-6 col-md-offset-3">
 					<h1>Identifying the problems...</h1>
-					<hr class="hr--dark"/>
 				</div>
-				<div class="col col-sm-4">
+				<div class="col col-sm-12 col-md-6 col-md-offset-3">
 					<p>The previous site had some experimental navigation that left visitors searching for the links, and the home page imagery only contained shots of the building and printing equipment. I recommended surfacing the navigation to the top of the page for better visibility and to reduce confusion as to which page the user currently was on, as well as adding images to showcase some recent work.</p>
-					<img src="/img/projects/imprnt-wireframes-home.png">
-				</div>
-				<div class="col col-sm-8">
 					<img src="/img/projects/imprnt-current-site2.gif" class="project-image">
+					<img src="/img/projects/imprnt-wireframes-home.png">
 				</div>
 			</div>
 			<div id="case-study" class="row">
 				<div class="col col-sm-12">
 					<h1>Analyzing the competition...</h1>
-					<hr class="hr--dark"/>
 				</div>
 				<div class="col col-sm-4">
 					<p>In order to make sure Imprnt was offering competitive services, I did a thorough search online to find a handful of print shops that had high-end websites.</p>
@@ -163,17 +144,5 @@
 				},
 			],
 		});
-
-		// Smooth scroll to section
-		$.fn.goTo = function(offset) {
-			$('#project-content').animate({
-	            scrollTop: ($(this).offset().top - offset) + 'px'
-	        }, 500);
-	        return this; // for chaining...
-	    }
-		$('.content-link').on('click', function() {
-			$('#case-study').goTo(75);
-		});
-
 	</script>
 </html>
