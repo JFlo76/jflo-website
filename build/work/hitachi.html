@@ -5,7 +5,7 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col col-sm-12">
+				<div class="col col-sm-6 col-md-offset-3">
 					<h1>Hitachi Vantara's Lumada Core</h1>
 					<span class="btn--js-close-project">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
@@ -13,8 +13,6 @@
 							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
 						</svg>
 					</span>
-				</div>
-				<div class="col col-sm-6">
 					<div class="slick-slider">
 						<div class="content">
 							<img src="/img/projects/hitachi-home.jpg"
@@ -34,40 +32,30 @@
 							<span class="slick-slide__project-description">Inventory Details Page with Sensor Picker</span>
 						</div>
 					</div>
-				</div>
-				<div class="project-description col col-sm-6">
 					<h2>Overview</h2>
 					<p>Hitachi is heavily investing in the IoT marketplace and the first step was to build Lumada, a platform for data visualization of industrial machinery.</p>
 					<p>The main goal for the Alpha release included the ability to create and manage the digital representations of devices (Asset Avatars) that send data from sensors to the Lumada platform.</p>
 					<p>My roles included designing and then building the UI for the software. Deliverables included sitemaps, userflows, wireframes, lo-fi prototypes, hi-rez comps, styleguide/pattern library, and production-ready code.</p>
-					
-					<p>Toolkit: Sketch, Adobe CS, JIRA/Confluence, NPM, Grunt, Git, HTML, SASS, AngularJS</p>
+					<p><b>Roles</b>: UX/UI Design, UI Development<br/>
+					<b>Toolkit</b>: Sketch, Adobe CS, JIRA/Confluence, NPM, Grunt, Git, HTML, SASS, AngularJS</p>
 					<a href="https://www.hitachivantara.com" class="btn btn-primary" target="_blank">View marketing site</a>
 				</div>
 			</div>
 			<div class="row bg-light">
-				<div class="col col-sm-12">
+				<div class="col col-sm-6 col-md-offset-3">
 					<h1>Site Map and Workflow</h1>
-				</div>
-				<div class="col col-sm-12">
 					<img src="/img/projects/hitachi-site-map-2.jpg">
-				</div>
-				<div class="col col-sm-12 col-md-6 col-md-offset-3">
 					<img src="/img/projects/hitachi-dashboard-workflow.png" class="project-image">
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col col-sm-12">
+				<div class="col col-sm-6 col-md-offset-3">
 					<h1>Onboarding from Green Fields</h1>
-				</div>
-				<div class="col col-sm-6">
 					<p>Based on preliminary info from the PMs and engineers, the process for creating new Asset Avatars was coupled to the creation of an Asset Type (classification of device; e.g. "truck” or “printer") and whether the device needed a gateway to connect to the platform. Because of this, I suggested the user would need some help for successful creation of their inventory.</p>
 					<p>We contemplated doing inline help popups, but it still left a margin for error with the user. I recommended using a walkthrough approach, with sequential steps so the user would be encouraged to complete the critical first steps for populating their inventory.</p>
 					<p>Later on, the engineers were able to remove some of the dependencies around these, so the UI changed to a self-guided type, where the user could choose what they wanted to create first. Since the user profiles for Alpha were going to be Hitachi engineers who would receive training on the product, we felt this was an appropriate decision.</p>
  
-				</div>
-				<div class="col col-sm-6">
 					<div class="slick-slider">
 						<div class="content">
 							<img src="/img/projects/hitachi-onboarding-1.png">
@@ -105,21 +93,14 @@
 				</div>
 			</div>
 			<div class="row bg-light">
-				<div class="col col-sm-12">
+				<div class="col col-sm-6 col-md-offset-3">
 					<h1>Design Challenges</h1>
-				</div>
-				<div class="col col-sm-4">
 					<p>The first main challenge I faced was around the design strategy of the UI. The project managers had prioritized the targeted screen sizes for Alpha as 1) Desktop 2) Tablet 3) Phone.</p>
 					<p>My recommendation was to take a mobile-first approach to avoid having to retrofit the UI later, but due to a compressed timeline and impending deadline they decided the project wouldn't allow for it.</p>
 					<p>Having been in similar situations before, I knew how to design and build the UI in a way that would allow for easily adding the CSS for mobile. For my own reference, I had made a few wireframes for the mobile layout.</p>
 					
-				</div>
-				<div class="col col-sm-8">
 					<img src="/img/projects/hitachi-desktop-mobile.png" class="project-image">
-				</div>
-			<!-- </div>
-			<div class="row"> -->
-				<div class="col col-sm-4">
+					
 					<p>Another challenge I faced was around the Asset Data page, which needed to have the following features:</p>
 					<ul>
 						<li>Visualization of the device sensors, which are imported as a JSON file. This file structure, (or schema) is up to the user, so can potentially be a deeply nested tree.</li>
@@ -129,28 +110,25 @@
 					</ul>
 					<p>I did some research into how to best display a tree structure in a UI, including some D3.js options, but the devs were already committed to using Highcharts for their data visualization and adding another charting library was too expensive.</p>
 					<p>The solution I decided on was a nested folder/file type UI that was wide enough to accommodate deeply nested items. This pattern is easy to understand and widely known, plus I knew the it could be built using nothing but HMTL and CSS.</p>
-				</div>
-				<div class="col col-sm-8">
+
 					<img src="/img/projects/Sensor-Picker.png"
 						srcset="/img/projects/Sensor-Picker-2x.png 2x"
 						class="project-image">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col col-sm-12">
+				<div class="col col-sm-6 col-md-offset-3">
 					<h1>Development Phase</h1>
-				</div>
-				<div class="col col-sm-6">
 					<p>My role during the development phase was to build out the UI using HTML, CSS and some light JavaScript using AngularJS in coordination with the front-end devs who were doing the heavy JavaScript work.</p>
 					<p>In order to keep the code modular, we used SASS as a preprocessor for the CSS, adopted the BEM naming convention for our CSS classes, and a modified version of Atomic design for our overall design pattern hierarchy.</p>
 					<p>I wanted to avoid using Bootstrap to save some kilobytes, but there were still components that we needed (such as date pickers and modals) so we added them as needed, a la carte. The engineers wanted to utilize Angular's UI Bootstrap, which has the Bootstrap components built out as Angular directives, which helped integrate them easily into the app.</p>
 					<p>I also set up a pattern library using an automated style guide generator. This automates some of the build for the style guide and makes it easier to maintain and contribute to, because the markup is included within the file for each part of the UI and generated via Grunt/Gulp task runners.</p>
-					<h2>Conclusion</h2>
+					
+					<img src="/img/projects/hitachi-style-guide-parts.png" class="project-image">
+					
+					<h1>Conclusion</h1>
 					<p>Given the size of the team and the deadline imposed upon us, we put together a great Alpha application. In just over 4 months, we built out the foundation for Hitachi's new IoT platform, Lumada, and the stake holders were thrilled at what we accomplished.</p>
 					<p>My team lead informed us that when he presented the application to the Hitachi CEO, he was quoted as saying, <span class="quotes">"This is the best time I've ever had in the U.S."</span></p>
-				</div>
-				<div class="col col-sm-6">
-					<img src="/img/projects/hitachi-style-guide-parts.png" class="project-image">
 				</div>
 			</div>
 	</body>

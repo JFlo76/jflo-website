@@ -744,7 +744,7 @@ header {
 			}
 			h1 {
 				display: inline-block;
-				margin: 0 0 4rem;
+				margin: 0 0 2rem;
 				// font-size: 4rem;
 			}
 			// h2 {
@@ -807,7 +807,8 @@ header {
 			float: right;
 			width: auto;
 			width: 20px;
-			padding-top: 8px;
+			padding-top: .6rem;
+			// padding-top: 8px;
 			transition: transform .3s;
 			&:hover {
 				transform: scale(1.15);
@@ -821,11 +822,15 @@ header {
 		@media only screen and (min-width: $screen-md-min) {
 			// top: 5.5rem;
 			height: calc(100vh - 5.5rem);
+			.btn--js-close-project {
+				padding-top: 1.6rem;
+			}
 			#project-content {
 				padding: 0;
 				font-size: 1.6rem;
 				h1 {
 					font-size: 4rem;
+					margin: 0 0 4rem;
 				}
 				h2 {
 					font-size: 3rem;
