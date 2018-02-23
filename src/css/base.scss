@@ -33,14 +33,17 @@ html {
 }
 
 body {
+    @include font-smoothing();
     line-height: 1.6;
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     flex: 1 1 auto;
     position: relative;
-    // background-color: $black;
-    @include font-smoothing();
+    background-image: url("../img/foggy-forest.jpg");
+    background-position: 50% 20%;
+    background-size: cover;
+    background-attachment: fixed;
     &:before {
         content: "";
         position: absolute;
@@ -49,19 +52,11 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        // background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%, rgba(24,179,100,.5) 100%);
         background: linear-gradient(to bottom, rgba(175,230,216,.15) 0%, rgba(86,154,137,.5) 100%);
-        // filter: saturate(150%);
     }
-    // &:after {
-        background: linear-gradient(to bottom, rgba(175,230,216,.15) 0%, rgba(86,154,137,.5) 100%);
-        background-image: url("../img/foggy-forest.jpg");
-        background-position: 50% 20%;
-        background-size: cover;
-        background-attachment: fixed;
-        // filter: hue-rotate(90deg);
-    // }
-
+    @media only screen and (min-width: $screen-sm-min) {
+        background-image: url("../img/foggy-forest@2x.jpg");
+    }
 }
 ul, ol {
     margin-top: 0;
