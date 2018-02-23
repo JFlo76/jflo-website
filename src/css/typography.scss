@@ -25,6 +25,7 @@ h3 {
 }
 p {
 	margin-bottom: 2rem;
+	// max-width: 700px;
 }
 a {
 	color: $primary-color;
@@ -42,8 +43,8 @@ a {
 	// 	text-decoration: none;
 	// }
 }
-::-moz-selection { background: $secondary-color; }
-::selection { background: $secondary-color; }
+::-moz-selection { background: rgba(24,179,100,.5); }
+::selection { background: rgba(24,179,100,.5); }
 
 .quotes {
 	font-style: italic;
