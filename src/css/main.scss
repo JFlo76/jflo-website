@@ -89,6 +89,22 @@
 		border-color: $med-dark-gray;
 	}
 }
+.custom-list-style {
+	list-style: none;
+	position: relative;
+	&:before {
+		font-family: 'entypo' !important;
+		position: absolute;
+		left: -2.5rem;
+	}
+	&--neutral:before {
+		content: "\e99c";
+	}
+	&--happy:before {
+		content: "\e99b";
+	}
+}
+
 body {
 	
 	&.js-no-scroll {
