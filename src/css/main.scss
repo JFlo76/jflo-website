@@ -191,7 +191,7 @@ header {
 			clip-rule: evenodd;
 			fill: $black;
 		}
-		&:hover path {
+		&:hover path, &:hover polygon {
 			fill: $primary-color;
 		}
 	}
