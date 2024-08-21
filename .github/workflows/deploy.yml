@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy JFlo website
-        uses: JFlo76/jflo-website@v0.1.2
+      - name: Deploy JFlo-Website
+        uses: JFlo76/jflo-website@v0.1.0
         with:
           host: ${{secrets.SSH_HOST}} # IP address of the server
           key: ${{secrets.SSH_KEY}} # Private key of the server
