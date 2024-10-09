@@ -1,0 +1,10 @@
+$screen-xs-min: 640px;
+$screen-sm-min: 769px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: $screen-sm-min;
+$screen-sm-max: $screen-md-min;
+$screen-md-max: $screen-lg-min;
+
+$text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);

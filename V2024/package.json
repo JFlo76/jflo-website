@@ -1,0 +1,15 @@
+{
+  "name": "jflo-website",
+  "version": "0.2.0",
+  "description": "JFlo.io Website",
+  "private": true,
+  "devDependencies": {
+    "progressbar.js": "^1.0.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  }
+}

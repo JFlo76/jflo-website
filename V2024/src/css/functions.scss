@@ -1,0 +1,7 @@
+@function set-hr-color($color) {
+	@if (lightness($color) > 50) {
+		@return $med-dark-gray; // Lighter background, return dark color
+	} @else {
+		@return $med-gray; // Darker background, return light color
+	}
+}

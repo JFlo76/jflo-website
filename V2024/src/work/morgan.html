@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-sm-12">
+					<h1>Morgan Colton</h1>
+					<span class="btn--js-close-project">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" xml:space="preserve" class="icon-close">
+							<line class="st0" x1="0" y1="0" x2="45" y2="45"/>
+							<line class="st0" x1="45" y1="0" x2="0" y2="45"/>
+						</svg>
+					</span>
+				<hr class="hr--dark"/>
+				</div>
+				<div class="col col-sm-6">
+					<div class="slick-slider">
+						<div>
+							<img src="/img/projects/morgan-work.jpg"
+							srcset="/img/projects/morgan-work-2x.jpg 2x, 
+							/img/projects/morgan-work-3x.jpg 3x">
+							<span class="slick-slide__project-description">Portfolio</span>
+						</div>
+						<div>
+							<img src="/img/projects/morgan-work-details.jpg"
+							srcset="/img/projects/morgan-work-details-2x.jpg 2x, 
+							/img/projects/morgan-work-details-3x.jpg 3x">
+							<span class="slick-slide__project-description">Portfolio Details</span>
+						</div>
+						<div>
+							<img src="/img/projects/morgan-animated.gif">
+							<span class="slick-slide__project-description">Opening of Portfolio Details</span>
+						</div>
+						<div>
+							<img src="/img/projects/morgan-about.jpg"
+							srcset="/img/projects/morgan-about-2x.jpg 2x, 
+							/img/projects/morgan-about-3x.jpg 3x">
+							<span class="slick-slide__project-description">About &amp; Skills Section</span>
+						</div>
+					</div>
+				</div>
+				<div class="project-description col col-sm-6">
+					<p>Morgan Colton is a seasoned UI/UX Designer, as well as a former coworker and friend of mine. He came to me for help building his portfolio site that he designed, with the following criteria:</p>
+					<ul>
+						<li>Single page website that emulated an application-like experience</li>
+						<li>Paralax scrolling effect</li>
+						<li>Links that scroll the user to the sections</li>
+						<li>Responsive for multiple screen sizes</li>
+						<li>Fast loading time and performant</li>
+					</ul>
+					<p>To achieve these goals I kept the use of libraries to a minimum, enabled gzip compression on his server, and used AJAX for loading additional content. The initial payload for the site amounts to 635KB and load time for the site averages at just over 1 second.</p>
+					<hr class="hr--dark"/>
+					<a href="http://morgancolton.com" class="btn btn-primary right" target="_blank">View Project</a>
+					<p class="left">Toolkit: jQuery, HTML, CSS</p>
+
+				</div>
+			</div>
+	</body>
+	<script src="/js/main.min.js"></script>
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			prevArrow: '<button class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-10.7 -1.4 24.6 46.4" xml:space="preserve" class="icon-arrow" icon-arrow--left"><polyline points="13.2,44.3 -9.3,21.8 13.2,-0.7 "/></svg></button>',
+			nextArrow: '<button class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.6 46.4" xml:space="preserve" class="icon-arrow"><polyline points="0.7,0.7 23.2,23.2 0.7,45.7 "/></svg></button>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+					}
+				},
+			],
+		});
+
+		// $('.btn--js-close-project').on('click', function() {
+		// 	$('#project-content').toggleClass('fade-in');
+			
+		// 	$('#project-content').one('msTransitionEnd transitionend', function() {
+		// 		$('body').removeClass('js-no-scroll').removeClass('project-loaded');
+		// 		$('.projects').toggleClass('projects--loading-project');
+		// 		$('#project-content').empty();
+		// 	});
+			
+		// });
+	</script>
+</html>

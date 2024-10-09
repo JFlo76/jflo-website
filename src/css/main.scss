@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import 'base';
 @import 'brand';
 @import 'buttons';
@@ -291,33 +292,33 @@ header {
 		}
 	}
 }
-.vertical-navigation {
-	display: none;
-	// Desktop ================================================ //
-	@media only screen and (min-width: $screen-sm-min) {
-		display: block;
-		position: fixed;
-		bottom: 10rem;
-		right: 5rem;
-		z-index: 10;
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			li {
-				background-color: #fff;
-				width: 1rem;
-				height: 1rem;
-				margin-bottom: 1rem;
-				border: 2px solid $med-gray;
-				&.active {
-					background-color: $primary-color;
-					border: 2px solid darken($primary-color, 10%);
-				}
-			}
-		}
-	}
-}
+// .vertical-navigation {
+// 	display: none;
+// 	// Desktop ================================================ //
+// 	@media only screen and (min-width: $screen-sm-min) {
+// 		display: block;
+// 		position: fixed;
+// 		bottom: 10rem;
+// 		right: 5rem;
+// 		z-index: 10;
+// 		ul {
+// 			margin: 0;
+// 			padding: 0;
+// 			list-style: none;
+// 			li {
+// 				background-color: #fff;
+// 				width: 1rem;
+// 				height: 1rem;
+// 				margin-bottom: 1rem;
+// 				border: 2px solid $med-gray;
+// 				&.active {
+// 					background-color: $primary-color;
+// 					// border: 2px solid darken($primary-color, 10%);
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 .content-link {
     @extend .font-oswald;
     @include accelerated(transform);
@@ -460,7 +461,7 @@ header {
 				font-size: 3vw;
 				span {
 					font-size: 4vw;
-					color: lighten($primary-color, 0%);
+					// color: lighten($primary-color, 0%);
 				}
 				// &:first-child {
 				// 	text-transform: uppercase;
@@ -668,6 +669,13 @@ header {
 }
 
 .projects {
+	// .centered {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// }
+
+	// display: flex;
+	// align-items: center;
 	margin: 5.5rem 0;
 	padding-top: 2rem;
 	padding-bottom: 0;
@@ -709,6 +717,16 @@ header {
 		}
 	}
 	// Tablet + ========================= //
+	// Desktop + ========================= //
+	@media only screen and (min-width: $screen-xlg-min) {
+		display: flex;
+		align-items: center;
+	
+		padding-top: 0;
+		margin-top: 0;
+	}
+	// Desktop + ========================= //
+	
 	.project-card {
 		// box-shadow: 0 4px 20px -4px rgba(0,0,0,.35);
 		box-shadow: 0 10px 30px -10px rgba(0,0,0,.35);
@@ -724,7 +742,7 @@ header {
 			// box-shadow: 0 4px 10px -2px rgba(0,0,0,.35);
 			box-shadow: 0 5px 10px -5px rgba(0,0,0,.35);
 			.project-card__btn {
-				background-color: darken($primary-color, 10%);
+				background-color: color.adjust($primary-color, $lightness: -10%);
 
 			}
 		}
@@ -811,10 +829,10 @@ header {
 					padding: 2rem 0;
 					margin: 0 auto;
 					&:nth-child(even) {
-						background-color: #4D4D4D;
+						background-color: color.adjust($black, $lightness: 5%);
 					}
 					img {
-						margin: 0 auto 2rem auto;
+						margin: 0 auto 3rem auto;
 					}
 					.content-link {
 						display: none;
@@ -841,7 +859,7 @@ header {
 			position: absolute;
 			left: 0;
 			width: 100%;
-			background-color: $dark-gray;
+			background-color: $black;
 			transition: transform .5s ease-in-out;
 		}
 		&:before {

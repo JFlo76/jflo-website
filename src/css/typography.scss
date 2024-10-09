@@ -36,9 +36,10 @@ a {
 	// border-bottom: 1px solid $primary-color;
 	// padding-bottom: 2px;
 	&:hover {
-		color: lighten($primary-color, 10%);
+		// color: lighten($primary-color, 10%);
+		color: adjust($primary-color, 10%);
 		// border-color: lighten($primary-color, 10%);
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	// color: $black;
 	// &:hover {
