@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'build/css/main.min.css' : 'src/css/main.scss'
+                    'build/css/main.min.css': 'src/css/main.scss'
                 }
             }
         },
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
                 // }]
                 files: {
                     'build/js/main.min.js': ['src/js/main.js'],
-                    'build/js/homepage.min.js': ['src/js/homepage.js'],
+                    // 'build/js/homepage.min.js': ['src/js/homepage.js'],
                     // src: 'src/js/main.js',
                     // dest: 'build/js/main.min.js',
                 }
